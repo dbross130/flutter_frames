@@ -15,41 +15,46 @@ class CCMSRegister extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('CCMS REGISTER'),
+        title: Text(
+          'CCMS REGISTER',
+          style: TextStyle(
+              color: Colors.red.shade900, fontWeight: FontWeight.bold),
+        ),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Container(
-                    height: 30,
-                    width: 120,
-                    decoration: BoxDecoration(border: Border.all()),
-                    child: Center(
-                      child: Text(
-                        DateFormat('MM-yyyy').format(DateTime.now()),
-                        style: const TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.bold),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 930),
+                    child: Container(
+                      height: 30,
+                      width: 120,
+                      decoration: BoxDecoration(border: Border.all()),
+                      child: Center(
+                        child: Text(
+                          DateFormat('MM-yyyy').format(DateTime.now()),
+                          style: const TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Icon(Icons.search),
-                )
-              ],
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                  const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Icon(Icons.search),
+                  )
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: 30, right: 30, top: 30, bottom: 30),
                 child: Container(
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.blue.shade900)),
@@ -174,14 +179,104 @@ class CCMSRegister extends StatelessWidget {
                                 )),
                               ]),
                               const DataRow(cells: [
-                                DataCell(Text('2')),
-                                DataCell(Text('200')),
-                                DataCell(Text('300')),
-                                DataCell(Text('Test 2')),
-                                DataCell(Text('5')),
-                                DataCell(Text('30')),
-                                DataCell(Text('2.8')),
-                                DataCell(Text('84.0')),
+                                DataCell(Text('')),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                              ]),
+                              const DataRow(cells: [
+                                DataCell(Text('')),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                              ]),
+                              const DataRow(cells: [
+                                DataCell(Text('')),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                              ]),
+                              const DataRow(cells: [
+                                DataCell(Text('')),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                              ]),
+                              const DataRow(cells: [
+                                DataCell(Text('')),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                              ]),
+                              const DataRow(cells: [
+                                DataCell(Text('')),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                              ]),
+                              const DataRow(cells: [
+                                DataCell(Text('')),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                              ]),
+                              const DataRow(cells: [
+                                DataCell(Text('')),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                              ]),
+                              const DataRow(cells: [
+                                DataCell(Text('')),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                              ]),
+                              const DataRow(cells: [
+                                DataCell(Text('')),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
                               ]),
                             ],
                           ),
@@ -240,54 +335,54 @@ class CCMSRegister extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 350, bottom: 20),
-              child: Row(
-                children: [
-                  Container(
-                    height: 30,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.blue.shade900,
-                      borderRadius: BorderRadius.circular(6),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'EDIT',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                          color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.only(left: 350, bottom: 20),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 30,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.blue.shade900,
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          'EDIT',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Container(
-                    height: 30,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.green.shade900,
-                      borderRadius: BorderRadius.circular(6),
+                    const SizedBox(
+                      width: 20,
                     ),
-                    child: const Center(
-                      child: Text(
-                        'SUBMIT',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                          color: Colors.white,
+                    Container(
+                      height: 30,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.green.shade900,
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          'SUBMIT',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            )
-          ],
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

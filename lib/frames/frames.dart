@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_frames/frames/LubeRegister.dart';
+import 'package:flutter_frames/frames/lube/LubeRegister.dart';
 import 'package:flutter_frames/frames/ReadingBook.dart';
+import 'package:flutter_frames/frames/SalaryRegister.dart';
+
+import 'package:flutter_frames/frames/shortExcess/ShortOrExcess.dart';
 import 'package:flutter_frames/frames/ca_worksheet.dart';
 import 'package:flutter_frames/frames/ccms_register.dart';
-import 'package:flutter_frames/frames/invoice_register.dart';
+import 'package:flutter_frames/frames/invoice_reg/invoice_register.dart';
+import 'package:flutter_frames/frames/lpg/LpgRegister.dart';
 import 'package:flutter_frames/frames/ppc/ppc_book.dart';
 import 'package:flutter_frames/frames/test_register.dart';
 
@@ -15,7 +19,11 @@ class FramesPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('FRAMES PAGE'),
+        title: Text(
+          'FRAMES PAGE',
+          style: TextStyle(
+              color: Colors.red.shade900, fontWeight: FontWeight.bold),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(
@@ -219,56 +227,80 @@ class FramesPage extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          height: 30,
-                          width: 200,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.blue.shade900)),
-                          child: Center(
-                              child: Text(
-                            'F15-LPG REGISTER',
-                            style: TextStyle(
-                              color: Colors.blue.shade900,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14,
-                            ),
-                          )),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => LpgRegister(),
+                              )),
+                          child: Container(
+                            height: 30,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Text(
+                              'F15-LPG REGISTER',
+                              style: TextStyle(
+                                color: Colors.blue.shade900,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                              ),
+                            )),
+                          ),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          height: 30,
-                          width: 200,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.blue.shade900)),
-                          child: Center(
-                              child: Text(
-                            'F17-SALARY REGISTER',
-                            style: TextStyle(
-                              color: Colors.blue.shade900,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14,
-                            ),
-                          )),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SalaryRegister(),
+                              )),
+                          child: Container(
+                            height: 30,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Text(
+                              'F17-SALARY REGISTER',
+                              style: TextStyle(
+                                color: Colors.blue.shade900,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                              ),
+                            )),
+                          ),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          height: 30,
-                          width: 200,
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.blue.shade900)),
-                          child: Center(
-                              child: Text(
-                            'F19-SHORT OR EXCESS',
-                            style: TextStyle(
-                              color: Colors.blue.shade900,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14,
-                            ),
-                          )),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ShortOrExcess(),
+                              )),
+                          child: Container(
+                            height: 30,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Text(
+                              'F19-SHORT OR EXCESS',
+                              style: TextStyle(
+                                color: Colors.blue.shade900,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14,
+                              ),
+                            )),
+                          ),
                         ),
                       )
                     ],

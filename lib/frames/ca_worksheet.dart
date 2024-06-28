@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: CaWorksheet(),
-  ));
-}
+
 
 class CaWorksheet extends StatefulWidget {
   const CaWorksheet({super.key});
@@ -22,7 +18,11 @@ class _CaWorksheetState extends State<CaWorksheet> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('CA WORKSHEET'),
+        title: Text(
+          'CA WORKSHEET',
+          style: TextStyle(
+              color: Colors.red.shade900, fontWeight: FontWeight.bold),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -35,10 +35,11 @@ class _CaWorksheetState extends State<CaWorksheet> {
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     width: 150,
+                    //height: 30,
                     decoration: BoxDecoration(
                       color: Colors.grey.shade100,
                       border: Border.all(),
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(40),
                     ),
                     child: const Row(
                       children: [
@@ -50,16 +51,18 @@ class _CaWorksheetState extends State<CaWorksheet> {
                           ),
                         ),
                         Expanded(
-                          child: TextField(
-                            decoration: InputDecoration(
-                              hintText: 'SEARCH',
-                              hintStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold),
-                              border: InputBorder.none,
-                              contentPadding:
-                                  EdgeInsets.symmetric(vertical: 8.0),
+                          child: Center(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                hintText: 'SEARCH',
+                                hintStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold),
+                                border: InputBorder.none,
+                                contentPadding:
+                                    EdgeInsets.symmetric(vertical: 8.0),
+                              ),
                             ),
                           ),
                         ),
@@ -99,7 +102,6 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: DropdownButton(
-                                    dropdownColor: Colors.blue.shade100,
                                     isExpanded: true,
                                     icon: Icon(
                                       Icons.arrow_drop_down,
@@ -154,7 +156,6 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   child: DropdownButton(
-                                    dropdownColor: Colors.blue.shade100,
                                     isExpanded: true,
                                     icon: Icon(
                                       Icons.arrow_drop_down,
@@ -213,7 +214,6 @@ class _CaWorksheetState extends State<CaWorksheet> {
                               child: Column(
                                 children: [
                                   DropdownButton(
-                                    dropdownColor: Colors.blue.shade100,
                                     isExpanded: true,
                                     icon: Icon(
                                       Icons.arrow_drop_down,
@@ -253,7 +253,6 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     onChanged: (value) {},
                                   ),
                                   DropdownButton(
-                                    dropdownColor: Colors.blue.shade100,
                                     isExpanded: true,
                                     icon: Icon(
                                       Icons.arrow_drop_down,
@@ -336,11 +335,11 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                   _showTimePickerDialog(context);
                                 },
                                 child: Padding(
-                                  padding: EdgeInsets.only(
+                                  padding: const EdgeInsets.only(
                                       left: 10, top: 5, bottom: 5),
                                   child: Text(
                                     'Start time: ${_selectedTime?.format(context) ?? "Select"}',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.bold),
                                   ),
@@ -395,34 +394,36 @@ class _CaWorksheetState extends State<CaWorksheet> {
                             rows: [
                               DataRow(cells: [
                                 const DataCell(Text('1')),
-                                DataCell(Text(
-                                  'IP4',
-                                  style: TextStyle(color: Colors.red.shade700),
-                                )),
-                                DataCell(Text(
-                                  'IP5',
-                                  style: TextStyle(
-                                      color: Colors.red.shade700,
-                                      fontWeight: FontWeight.bold),
-                                )),
-                                DataCell(Text(
-                                  'IP6',
-                                  style: TextStyle(
-                                      color: Colors.red.shade700,
-                                      fontWeight: FontWeight.bold),
-                                )),
-                                DataCell(Text(
-                                  'IP7',
-                                  style: TextStyle(
-                                      color: Colors.red.shade700,
-                                      fontWeight: FontWeight.bold),
-                                )),
-                                DataCell(Text(
-                                  'CAL1',
-                                  style: TextStyle(
-                                      color: Colors.red.shade700,
-                                      fontWeight: FontWeight.bold),
-                                )),
+                                DataCell(TextField(
+                                    decoration: InputDecoration(
+                                  hintText: 'IP4',
+                                  hintStyle:
+                                      TextStyle(color: Colors.red.shade700),
+                                ))),
+                                DataCell(TextField(
+                                    decoration: InputDecoration(
+                                  hintText: 'IP5',
+                                  hintStyle:
+                                      TextStyle(color: Colors.red.shade700),
+                                ))),
+                                DataCell(TextField(
+                                    decoration: InputDecoration(
+                                  hintText: 'IP6',
+                                  hintStyle:
+                                      TextStyle(color: Colors.red.shade700),
+                                ))),
+                                DataCell(TextField(
+                                    decoration: InputDecoration(
+                                  hintText: 'IP7',
+                                  hintStyle:
+                                      TextStyle(color: Colors.red.shade700),
+                                ))),
+                                DataCell(TextField(
+                                    decoration: InputDecoration(
+                                  hintText: 'CAL1',
+                                  hintStyle:
+                                      TextStyle(color: Colors.red.shade700),
+                                ))),
                                 DataCell(Text(
                                   'IP8',
                                   style: TextStyle(
@@ -438,13 +439,13 @@ class _CaWorksheetState extends State<CaWorksheet> {
                               ]),
                               const DataRow(cells: [
                                 DataCell(Text('2')),
-                                DataCell(Text('200')),
-                                DataCell(Text('300')),
-                                DataCell(Text('Test 2')),
-                                DataCell(Text('5')),
-                                DataCell(Text('30')),
-                                DataCell(Text('2.8')),
-                                DataCell(Text('84.0')),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
+                                DataCell(TextField()),
                               ]),
                             ],
                           ),
@@ -554,6 +555,7 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     decoration: BoxDecoration(
                                         border: Border.all(
                                             color: Colors.blue.shade900)),
+                                    child: const TextField(),
                                   ),
                                 )),
                                 DataCell(Padding(
@@ -564,6 +566,7 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     decoration: BoxDecoration(
                                         border: Border.all(
                                             color: Colors.blue.shade900)),
+                                    child: const TextField(),
                                   ),
                                 )),
                                 DataCell(Padding(
@@ -574,6 +577,7 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     decoration: BoxDecoration(
                                         border: Border.all(
                                             color: Colors.blue.shade900)),
+                                    child: const TextField(),
                                   ),
                                 )),
                                 DataCell(Padding(
@@ -584,6 +588,7 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     decoration: BoxDecoration(
                                         border: Border.all(
                                             color: Colors.blue.shade900)),
+                                    child: const TextField(),
                                   ),
                                 )),
                                 DataCell(Padding(
@@ -594,6 +599,7 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     decoration: BoxDecoration(
                                         border: Border.all(
                                             color: Colors.blue.shade900)),
+                                    child: const TextField(),
                                   ),
                                 )),
                                 DataCell(Padding(
@@ -604,6 +610,7 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     decoration: BoxDecoration(
                                         border: Border.all(
                                             color: Colors.blue.shade900)),
+                                    child: const TextField(),
                                   ),
                                 )),
                                 DataCell(Padding(
@@ -614,6 +621,7 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     decoration: BoxDecoration(
                                         border: Border.all(
                                             color: Colors.blue.shade900)),
+                                    child: const TextField(),
                                   ),
                                 )),
                                 DataCell(Padding(
@@ -624,6 +632,7 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     decoration: BoxDecoration(
                                         border: Border.all(
                                             color: Colors.blue.shade900)),
+                                    child: const TextField(),
                                   ),
                                 )),
                                 DataCell(Padding(
@@ -634,6 +643,7 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                     decoration: BoxDecoration(
                                         border: Border.all(
                                             color: Colors.blue.shade900)),
+                                    child: const TextField(),
                                   ),
                                 )),
                               ]),
@@ -690,12 +700,22 @@ class _CaWorksheetState extends State<CaWorksheet> {
                 ),
               ),
             ),
-            ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStatePropertyAll(Colors.green.shade800)),
-              onPressed: () {},
-              child: const Text('Submit'),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+                width: 100,
+                height: 30,
+                decoration: BoxDecoration(
+                    color: Colors.green.shade700,
+                    borderRadius: BorderRadius.circular(8)),
+                child: const Center(
+                  child: Text(
+                    'SUBMIT',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                ),
+              ),
             )
           ],
         ),

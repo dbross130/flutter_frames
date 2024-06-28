@@ -9,8 +9,10 @@ class TestRegister extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(
+        title: Text(
           'TEST REGISTER',
+          style: TextStyle(
+              color: Colors.red.shade900, fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(
@@ -30,7 +32,7 @@ class TestRegister extends StatelessWidget {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.blue.shade900)),
                       child: Padding(
-                        padding: EdgeInsets.only(left: 10, right: 10),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Text(
                           DateFormat('dd-MM-yyyy').format(DateTime.now()),
                           style: TextStyle(
@@ -87,7 +89,6 @@ class TestRegister extends StatelessWidget {
                                     border: Border.all(),
                                     borderRadius: BorderRadius.circular(5)),
                                 child: DropdownButton(
-                                  dropdownColor: Colors.blue.shade100,
                                   isExpanded: true,
                                   hint: const Padding(
                                     padding: EdgeInsets.only(left: 8),
@@ -801,13 +802,21 @@ class TestRegister extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 10, top: 10),
-                child: ElevatedButton(
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStatePropertyAll(Colors.green.shade900)),
-                    onPressed: () {},
-                    child: const Text('SAVE')),
+                padding: const EdgeInsets.all(15.0),
+                child: Container(
+                  height: 30,
+                  width: 100,
+                  decoration: BoxDecoration(
+                      color: Colors.green.shade700,
+                      borderRadius: BorderRadius.circular(8)),
+                  child: const Center(
+                    child: Text(
+                      'SAVE',
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
               )
             ],
           ),

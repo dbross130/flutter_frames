@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: ReadingBook(),
-  ));
-}
-
 class ReadingBook extends StatelessWidget {
   const ReadingBook({super.key});
 
@@ -16,99 +9,97 @@ class ReadingBook extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(
+        title: Text(
           'Reading Book',
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
+            color: Colors.red.shade900,
           ),
         ),
       ),
       body: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 35,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.blue.shade900),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        DateFormat('dd-MM-yyyy').format(DateTime.now()),
-                        style: TextStyle(
-                            color: Colors.blue.shade900,
-                            fontWeight: FontWeight.bold
-                          
-                            ),
-                      ),
-                    ),
-                  ),
-                ),
-                
-                const SizedBox(
-                  width: 450,
-                ),
-                Container(
-                  height: 30,
-                  width: 60,
-                  decoration: BoxDecoration(
-                      border: Border.all(), color: Colors.blue.shade50),
-                  child: Padding(
+        scrollDirection: Axis.vertical,
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Center(
-                      child: GestureDetector(
-                        onTap: () {},
+                    child: Container(
+                      height: 35,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.blue.shade900),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          'VIEW',
+                          DateFormat('dd-MM-yyyy').format(DateTime.now()),
                           style: TextStyle(
-                              fontSize: 12,
                               color: Colors.blue.shade900,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Container(
-                  height: 30,
-                  width: 70,
-                  decoration: BoxDecoration(
-                      border: Border.all(), color: Colors.blue.shade50),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 8),
-                    child: TextField(
-                      decoration: InputDecoration(
-                          hintText: 'SEARCH',
-                          hintStyle: TextStyle(
-                            fontSize: 12,
-                            color: Colors.blue.shade900,
-                            fontWeight: FontWeight.bold,
-                          )),
+                  const SizedBox(
+                    width: 450,
+                  ),
+                  Container(
+                    height: 30,
+                    width: 60,
+                    decoration: BoxDecoration(
+                        border: Border.all(), color: Colors.blue.shade50),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Center(
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: Text(
+                            'VIEW',
+                            style: TextStyle(
+                                fontSize: 10,
+                                color: Colors.blue.shade900,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                 
-                ),
-              ],
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
-                child: Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(),
+                  const SizedBox(
+                    width: 10,
                   ),
-                  child: SingleChildScrollView(
+                  Container(
+                    height: 30,
+                    width: 70,
+                    decoration: BoxDecoration(
+                        border: Border.all(), color: Colors.blue.shade50),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8, bottom: 5),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            hintText: 'SEARCH',
+                            hintStyle: TextStyle(
+                              fontSize: 10,
+                              color: Colors.blue.shade900,
+                              fontWeight: FontWeight.bold,
+                            )),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
+                child: SingleChildScrollView(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(),
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       // mainAxisAlignment: MainAxisAlignment.start,
@@ -125,7 +116,6 @@ class ReadingBook extends StatelessWidget {
                             ),
                             child: Center(
                               child: DropdownButton(
-                                dropdownColor: Colors.blue.shade100,
                                 isExpanded: true,
                                 icon: Icon(
                                   Icons.arrow_drop_down,
@@ -140,7 +130,7 @@ class ReadingBook extends StatelessWidget {
                                   child: Text(
                                     'SHIFT',
                                     style: TextStyle(
-                                      fontSize: 12,
+                                      fontSize: 10,
                                       color: Colors.blue.shade900,
                                     ),
                                   ),
@@ -700,11 +690,13 @@ class ReadingBook extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(
-                              left: 100, top: 30, bottom: 30),
+                            left: 165,
+                            top: 30,
+                          ),
                           child: Row(
                             children: [
                               Container(
-                                width: 100,
+                                width: 120,
                                 height: 25,
                                 decoration: BoxDecoration(
                                     border: Border.all(
@@ -712,7 +704,7 @@ class ReadingBook extends StatelessWidget {
                                 child: const Center(child: Text('DIP')),
                               ),
                               Container(
-                                width: 150,
+                                width: 160,
                                 height: 25,
                                 decoration: BoxDecoration(
                                     border: Border.all(
@@ -730,65 +722,137 @@ class ReadingBook extends StatelessWidget {
                             ],
                           ),
                         ),
-
-                        // Padding(
-                        //   padding: const EdgeInsets.all(10.0),
-                        //   child: DataTable(border: TableBorder.all(), columns: [
-                        //     const DataColumn(label: Text('Tank 1')),
-                        //     DataColumn(
-                        //         label: Padding(
-                        //       padding: const EdgeInsets.all(8.0),
-                        //       child: Container(
-                        //         height: 60,
-                        //         width: 50,
-                        //         decoration: BoxDecoration(
-                        //             border: Border.all(
-                        //               width: 1.5,
-                        //               color: Colors.red.shade900,
-                        //             ),
-                        //             borderRadius: const BorderRadius.only(
-                        //                 topRight: Radius.circular(20),
-                        //                 bottomRight: Radius.circular(20))),
-                        //       ),
-                        //     )),
-                        //     const DataColumn(label: Text('Tank 1')),
-                        //     const DataColumn(label: Text('Tank 1')),
-                        //     const DataColumn(label: Text('Tank 1')),
-                        //     const DataColumn(label: Text('Tank 1')),
-                        //     const DataColumn(label: Text('Tank 1')),
-                        //   ], rows: [
-                        //     DataRow(cells: [
-                        //       DataCell(Padding(
-                        //         padding: const EdgeInsets.all(8.0),
-                        //         child: Container(
-                        //           height: 60,
-                        //           width: 50,
-                        //           decoration: BoxDecoration(
-                        //               border: Border.all(
-                        //                 width: 1.5,
-                        //                 color: Colors.red.shade900,
-                        //               ),
-                        //               borderRadius: const BorderRadius.only(
-                        //                   topRight: Radius.circular(20),
-                        //                   bottomRight: Radius.circular(20))),
-                        //         ),
-                        //       )),
-                        //       const DataCell(Text('[IP2]')),
-                        //       const DataCell(Text('[IP2]')),
-                        //       const DataCell(Text('[IP2]')),
-                        //       const DataCell(Text('[IP2]')),
-                        //       const DataCell(Text('[IP2]')),
-                        //       const DataCell(Text('[IP2]')),
-                        //     ])
-                        //   ]),
-                        // )
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 60, bottom: 60, top: 10),
+                          child: DataTable(border: TableBorder.all(), columns: [
+                            DataColumn(
+                              label: Container(
+                                width: 55,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                      width: 1.5,
+                                      color: Colors.red.shade900,
+                                    ),
+                                    borderRadius: const BorderRadius.only(
+                                        topRight: Radius.circular(30),
+                                        bottomRight: Radius.circular(30))),
+                                child: const Center(child: Text('PDT')),
+                              ),
+                            ),
+                            const DataColumn(
+                                label: Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text('TANK1'))),
+                            DataColumn(
+                                label: Text(
+                              '[IP2]',
+                              style: TextStyle(
+                                  color: Colors.red.shade800,
+                                  fontWeight: FontWeight.bold),
+                            )),
+                            DataColumn(
+                                label: Text(
+                              '[IP3]',
+                              style: TextStyle(
+                                  color: Colors.red.shade800,
+                                  fontWeight: FontWeight.bold),
+                            )),
+                            DataColumn(
+                                label: Text(
+                              '[CAL1]',
+                              style: TextStyle(
+                                  color: Colors.red.shade800,
+                                  fontWeight: FontWeight.bold),
+                            )),
+                          ], rows: [
+                            DataRow(cells: [
+                              DataCell(Container(
+                                width: 55,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                      width: 1.5,
+                                      color: Colors.green.shade900,
+                                    ),
+                                    borderRadius: const BorderRadius.only(
+                                        topRight: Radius.circular(20),
+                                        bottomRight: Radius.circular(20))),
+                                child: const Center(child: Text('PDT')),
+                              )),
+                              const DataCell(Text('TANK1')),
+                              const DataCell(Text('')),
+                              const DataCell(Text('')),
+                              const DataCell(Text('')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Container(
+                                width: 55,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                      width: 1.5,
+                                      color: Colors.purple.shade900,
+                                    ),
+                                    borderRadius: const BorderRadius.only(
+                                        topRight: Radius.circular(20),
+                                        bottomRight: Radius.circular(20))),
+                                child: const Center(child: Text('PDT')),
+                              )),
+                              const DataCell(Text('TANK1')),
+                              const DataCell(Text('')),
+                              const DataCell(Text('')),
+                              const DataCell(Text('')),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Container(
+                                width: 55,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                      width: 1.5,
+                                      color: Colors.yellow.shade700,
+                                    ),
+                                    borderRadius: const BorderRadius.only(
+                                        topRight: Radius.circular(20),
+                                        bottomRight: Radius.circular(20))),
+                                child: const Center(child: Text('PDT')),
+                              )),
+                              const DataCell(Text('TANK1')),
+                              const DataCell(Text('')),
+                              const DataCell(Text('')),
+                              const DataCell(Text('')),
+                            ])
+                          ]),
+                        )
                       ],
                     ),
                   ),
                 ),
               ),
-            )
-          ],
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 130,
+                    height: 30,
+                    decoration: BoxDecoration(
+                        color: Colors.green.shade700,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: const Center(
+                      child: Text(
+                        'SAVE',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

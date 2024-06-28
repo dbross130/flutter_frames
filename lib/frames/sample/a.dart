@@ -19,87 +19,95 @@ class MyDataGridWidget extends StatelessWidget {
         centerTitle: true,
         title: const Text('Invoice Register'),
       ),
-      body: SfDataGrid(
-        gridLinesVisibility: GridLinesVisibility.both,
-        headerGridLinesVisibility: GridLinesVisibility.both,
-        source: _productDataSource,
-        columns: <GridColumn>[
-          GridColumn(
-            columnName: 'orderId',
-            label: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: const Text(
-                'ID',
-                overflow: TextOverflow.ellipsis,
-              ),
-            ),
-          ),
-          GridColumn(
-            columnName: 'customerName',
-            label: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: const Text(
-                'Name',
-                overflow: TextOverflow.ellipsis,
-              ),
-            ),
-          ),
-          GridColumn(
-            columnName: 'productId',
-            label: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerRight,
-              child: const Text(
-                'Product ID',
-                overflow: TextOverflow.ellipsis,
-              ),
-            ),
-          ),
-          GridColumn(
-            columnName: 'productName',
-            label: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              alignment: Alignment.centerLeft,
-              child: const Text(
-                'Product',
-                overflow: TextOverflow.ellipsis,
-              ),
-            ),
-          ),
-        ],
-        stackedHeaderRows: <StackedHeaderRow>[
-          StackedHeaderRow(
-            cells: [
-              StackedHeaderCell(
-                columnNames: ['orderId', 'customerName', 'productId', 'productName'],
-                child: Container(
-                  color: const Color(0xFFF1F1F1),
-                  child: const Center(child: Text('Order Shipment Details')),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: SfDataGrid(
+          gridLinesVisibility: GridLinesVisibility.both,
+          headerGridLinesVisibility: GridLinesVisibility.both,
+          source: _productDataSource,
+          columns: <GridColumn>[
+            GridColumn(
+              columnName: 'orderId',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: const Text(
+                  'ID',
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
-            ],
-          ),
-          StackedHeaderRow(
-            cells: [
-              StackedHeaderCell(
-                columnNames: ['orderId', 'customerName'],
-                child: Container(
-                  color: const Color(0xFFF1F1F1),
-                  child: const Center(child: Text('Customer Details')),
+            ),
+            GridColumn(
+              columnName: 'customerName',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: const Text(
+                  'Name',
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
-              StackedHeaderCell(
-                columnNames: ['productId', 'productName'],
-                child: Container(
-                  color: const Color(0xFFF1F1F1),
-                  child: const Center(child: Text('Product Details')),
+            ),
+            GridColumn(
+              columnName: 'productId',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerRight,
+                child: const Text(
+                  'Product ID',
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
-            ],
-          ),
-        ],
+            ),
+            GridColumn(
+              columnName: 'productName',
+              label: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                alignment: Alignment.centerLeft,
+                child: const Text(
+                  'Product',
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+          ],
+          stackedHeaderRows: <StackedHeaderRow>[
+            StackedHeaderRow(
+              cells: [
+                StackedHeaderCell(
+                  columnNames: [
+                    'orderId',
+                    'customerName',
+                    'productId',
+                    'productName'
+                  ],
+                  child: Container(
+                    color: const Color(0xFFF1F1F1),
+                    child: const Center(child: Text('Order Shipment Details')),
+                  ),
+                ),
+              ],
+            ),
+            StackedHeaderRow(
+              cells: [
+                StackedHeaderCell(
+                  columnNames: ['orderId', 'customerName'],
+                  child: Container(
+                    color: const Color(0xFFF1F1F1),
+                    child: const Center(child: Text('Customer Details')),
+                  ),
+                ),
+                StackedHeaderCell(
+                  columnNames: ['productId', 'productName'],
+                  child: Container(
+                    color: const Color(0xFFF1F1F1),
+                    child: const Center(child: Text('Product Details')),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -114,6 +122,8 @@ class _ProductDataSource extends DataGridSource {
         productName: 'Product A'),
     Product(
         orderId: 2,
+
+        
         customerName: 'Jane Smith',
         productId: 102,
         productName: 'Product B'),
@@ -123,9 +133,12 @@ class _ProductDataSource extends DataGridSource {
   List<DataGridRow> get rows => product
       .map<DataGridRow>((product) => DataGridRow(cells: [
             DataGridCell<int>(columnName: 'orderId', value: product.orderId),
-            DataGridCell<String>(columnName: 'customerName', value: product.customerName),
-            DataGridCell<int>(columnName: 'productId', value: product.productId),
-            DataGridCell<String>(columnName: 'productName', value: product.productName),
+            DataGridCell<String>(
+                columnName: 'customerName', value: product.customerName),
+            DataGridCell<int>(
+                columnName: 'productId', value: product.productId),
+            DataGridCell<String>(
+                columnName: 'productName', value: product.productName),
           ]))
       .toList();
 
@@ -134,7 +147,8 @@ class _ProductDataSource extends DataGridSource {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
       return Container(
-        alignment: dataGridCell.columnName == 'orderId' || dataGridCell.columnName == 'productId'
+        alignment: dataGridCell.columnName == 'orderId' ||
+                dataGridCell.columnName == 'productId'
             ? Alignment.centerRight
             : Alignment.centerLeft,
         padding: const EdgeInsets.symmetric(horizontal: 16),
