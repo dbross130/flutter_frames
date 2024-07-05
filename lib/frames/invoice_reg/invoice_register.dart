@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_frames/frames/invoice_reg/invoice_register2.dart';
+import 'package:flutter_frames/frames/invoice_reg/invoicesearchpage.dart';
 import 'package:intl/intl.dart';
 
 class InvoiceRegister extends StatelessWidget {
@@ -47,19 +48,49 @@ class InvoiceRegister extends StatelessWidget {
                       ),
                     ),
                   ),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(
+                  //     left: 300,
+                  //     top: 30,
+                  //     bottom: 10,
+                  //     right: 50,
+                  //   ),
+                  //   child: Icon(
+                  //     Icons.search,
+                  //     size: 32,
+                  //     color: Colors.blue.shade900,
+                  //   ),
+                  // )
                   Padding(
                     padding: const EdgeInsets.only(
-                      left: 300,
-                      top: 30,
-                      bottom: 10,
-                      right: 50,
-                    ),
-                    child: Icon(
-                      Icons.search,
-                      size: 32,
-                      color: Colors.blue.shade900,
-                    ),
-                  )
+                        left: 300, top: 30, bottom: 10, right: 50),
+                    child: GestureDetector(
+                        onTap: () async {
+                          final DateTime? picked = await showDatePicker(
+                            context: context,
+                            initialDate: DateTime.now(),
+                            firstDate: DateTime(2000),
+                            lastDate: DateTime(3000),
+                            initialEntryMode: DatePickerEntryMode.input,
+                          );
+                          if (picked != null) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    InvoicesearchPage(selectedDate: picked),
+                              ),
+                            );
+                          }
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: Icon(
+                            Icons.search,
+                            color: Colors.blue.shade900,
+                          ),
+                        )),
+                  ),
                 ],
               ),
               const _CustomizableTable(
@@ -108,7 +139,7 @@ class InvoiceRegister extends StatelessWidget {
                   onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => InvoiceRegister2())),
+                          builder: (context) => const InvoiceRegister2())),
                   child: Container(
                     height: 30,
                     width: 150,
@@ -153,7 +184,7 @@ class _CustomizableTable extends StatelessWidget {
         columnWidths: const {
           0: FixedColumnWidth(60.0),
           1: FixedColumnWidth(100.0),
-          2: FixedColumnWidth(150.0),
+          2: FixedColumnWidth(180.0),
           3: FixedColumnWidth(150.0),
           4: FixedColumnWidth(900.0),
         },
@@ -164,20 +195,23 @@ class _CustomizableTable extends StatelessWidget {
               TableCell(
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      headers[0],
-                      style: TextStyle(
-                          color: Colors.blue.shade900,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
+                      padding: const EdgeInsets.only(top: 80),
+                      child: RotatedBox(
+                        quarterTurns: 3,
+                        child: RichText(
+                            text: TextSpan(
+                                text: headers[0],
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                ))),
+                      )),
                 ),
               ),
               TableCell(
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(top: 80.0),
                     child: Text(
                       headers[1],
                       style: TextStyle(
@@ -190,7 +224,7 @@ class _CustomizableTable extends StatelessWidget {
               TableCell(
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(top: 80.0),
                     child: Text(
                       headers[2],
                       style: TextStyle(
@@ -203,7 +237,7 @@ class _CustomizableTable extends StatelessWidget {
               TableCell(
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(top: 80),
                     child: Text(
                       headers[3],
                       style: TextStyle(
@@ -217,85 +251,95 @@ class _CustomizableTable extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(1),
                       decoration: const BoxDecoration(
                         border: Border(
                           bottom: BorderSide(width: 1.0, color: Colors.black),
                         ),
                       ),
+                      height: 60, // Set the height of the header
                       child: Center(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            headers[4],
-                            style: TextStyle(
-                                color: Colors.blue.shade900,
-                                fontWeight: FontWeight.bold),
+                        child: Text(
+                          headers[4], // "OPENING METER READING"
+                          style: const TextStyle(
+                            color: Color.fromARGB(255, 7, 75, 134),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14, // Adjust font size here
                           ),
                         ),
                       ),
                     ),
                     Row(
                       children: [
-                        Expanded(
-                          child: Center(
-                            child: Text(
-                              'PRODUCT1',
-                              style: TextStyle(
-                                  color: Colors.blue.shade900,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 1.0,
-                          height: 35.0,
-                          color: Colors.black,
-                        ),
-                        Expanded(
-                          child: Center(
-                            child: Text(
-                              'PRODUCT2',
-                              style: TextStyle(
-                                  color: Colors.blue.shade900,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 1.0,
-                          height: 35.0,
-                          color: Colors.black,
-                        ),
-                        Expanded(
-                          child: Center(
-                            child: Text(
-                              'PRODUCT3',
-                              style: TextStyle(
-                                  color: Colors.blue.shade900,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 1.0,
-                          height: 35.0,
-                          color: Colors.black,
-                        ),
-                        Expanded(
-                          child: Center(
-                            child: Text(
-                              'PRODUCT4',
-                              style: TextStyle(
-                                  color: Colors.blue.shade900,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ),
+                        ...List.generate(
+                            4,
+                            (index) => Expanded(
+                                  child: Column(
+                                    children: [
+                                      Center(
+                                          child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsets.only(left: 80),
+                                            child: Text(
+                                              'PRODUCT ${index + 1}',
+                                              style: TextStyle(
+                                                  color: Colors.blue.shade900,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
+                                          Container(
+                                            width: 1.0,
+                                            height: 60.0,
+                                            color: Colors.black,
+                                          ),
+                                        ],
+                                      )),
+                                      Container(
+                                        width: 300,
+                                        height: 1.0,
+                                        color: Colors.black,
+                                      ),
+                                      Row(
+                                        children: [
+                                          const Expanded(
+                                            child: Center(
+                                                child: Text(
+                                              'VOLUME',
+                                              style: TextStyle(
+                                                  color: Color.fromARGB(
+                                                      255, 7, 76, 134),
+                                                  fontWeight: FontWeight.bold),
+                                            )),
+                                          ),
+                                          Container(
+                                            width: 1.0,
+                                            height: 70.0,
+                                            color: Colors.black,
+                                          ),
+                                          const Expanded(
+                                            child: Center(
+                                                child: Text(
+                                              'DENSITY',
+                                              style: TextStyle(
+                                                  color: Color.fromARGB(
+                                                      255, 7, 75, 134),
+                                                  fontWeight: FontWeight.bold),
+                                            )),
+                                          ),
+                                          Container(
+                                            width: 1.0,
+                                            height: 70.0,
+                                            color: Colors.black,
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                )),
                       ],
                     ),
                   ],
@@ -316,42 +360,56 @@ class _CustomizableTable extends StatelessWidget {
             return TableRow(
               children: [
                 TableCell(child: Center(child: Text(rowData[0].toString()))),
-                TableCell(child: Center(child: rowData[1] = const TextField())),
+                TableCell(
+                    child: Center(
+                        child: rowData[1] = const Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: TextField(),
+                ))),
                 TableCell(child: Center(child: rowData[2] = const TextField())),
                 TableCell(child: Center(child: rowData[3] = const TextField())),
                 TableCell(
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Center(child: rowData[4] = const TextField()),
+                    child: Row(
+                  children: [
+                    ...List.generate(
+                      4,
+                      (i) => Expanded(
+                        child: Column(
+                          children: [
+                            if (index >= 0)
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: Center(
+                                        child: rowData[4] = const TextField()),
+                                  ),
+                                  Container(
+                                    width: 1.0,
+                                    height: 49,
+                                    color: Colors.black,
+                                  ),
+                                  const Expanded(
+                                      child: Center(
+                                    child: TextField(),
+                                  )),
+                                  Container(
+                                    width: 1,
+                                    height: 49,
+                                    color: Colors.black,
+                                  ),
+                                ],
+                              ),
+                          ],
+                        ),
                       ),
-                      Container(
-                        width: 1.0,
-                        height: 50.0,
-                        color: Colors.black,
-                      ),
-                      Expanded(
-                        child: Center(child: rowData[4] = const TextField()),
-                      ),
-                      Container(
-                        width: 1.0,
-                        height: 50.0,
-                        color: Colors.black,
-                      ),
-                      Expanded(
-                        child: Center(child: rowData[4] = const TextField()),
-                      ),
-                      Container(
-                        width: 1.0,
-                        height: 50.0,
-                        color: Colors.black,
-                      ),
-                      Expanded(
-                        child: Center(child: rowData[4] = const TextField()),
-                      ),
-                    ],
-                  ),
-                ),
+                    ),
+                    Container(
+                      width: 1,
+                      height: 41,
+                      color: Colors.black,
+                    )
+                  ],
+                ))
               ],
             );
           }),

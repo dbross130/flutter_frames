@@ -1,7 +1,8 @@
+// ignore_for_file: dead_code
+
 import 'package:flutter/material.dart';
+import 'package:flutter_frames/frames/caworksheet/casearchpage.dart';
 import 'package:intl/intl.dart';
-
-
 
 class CaWorksheet extends StatefulWidget {
   const CaWorksheet({super.key});
@@ -13,7 +14,7 @@ class CaWorksheet extends StatefulWidget {
 class _CaWorksheetState extends State<CaWorksheet> {
   @override
   Widget build(BuildContext context) {
-    String date = DateFormat('dd-MM-yyyy').format(DateTime.now());
+    DateFormat('dd-MM-yyyy').format(DateTime.now());
     TimeOfDay? _selectedTime;
     return Scaffold(
       appBar: AppBar(
@@ -33,40 +34,42 @@ class _CaWorksheetState extends State<CaWorksheet> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: 150,
-                    //height: 30,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade100,
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(40),
-                    ),
-                    child: const Row(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Icon(
-                            Icons.search,
-                            size: 26,
+                  child: GestureDetector(
+                    onTap: () async {
+                      final DateTime? picked = await showDatePicker(
+                        context: context,
+                        initialDate: DateTime.now(),
+                        firstDate: DateTime(2000),
+                        lastDate: DateTime(3000),
+                        initialEntryMode: DatePickerEntryMode.input,
+                      );
+                      if (picked != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                CasearchPage(selectedDate: picked),
+                          ),
+                        );
+                      }
+                    },
+                    child: Container(
+                      height: 30,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          color: Colors.blue.shade50,
+                          borderRadius: BorderRadius.circular(8)),
+                      child: Center(
+                        child: Text(
+                          'SEARCH',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 10,
+                            color: Colors.blue.shade900,
                           ),
                         ),
-                        Expanded(
-                          child: Center(
-                            child: TextField(
-                              decoration: InputDecoration(
-                                hintText: 'SEARCH',
-                                hintStyle: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.bold),
-                                border: InputBorder.none,
-                                contentPadding:
-                                    EdgeInsets.symmetric(vertical: 8.0),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
                 ),

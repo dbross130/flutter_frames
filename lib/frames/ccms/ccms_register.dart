@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_frames/frames/ccms/ccmssearchpage.dart';
 import 'package:intl/intl.dart';
 
 void main() {
@@ -46,10 +47,36 @@ class CCMSRegister extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Icon(Icons.search),
-                  )
+                  // const Padding(
+                  //   padding: EdgeInsets.all(10.0),
+                  //   child: Icon(Icons.search),
+                  // )
+                  GestureDetector(
+                      onTap: () async {
+                        final DateTime? picked = await showDatePicker(
+                          context: context,
+                          initialDate: DateTime.now(),
+                          firstDate: DateTime(2000),
+                          lastDate: DateTime(3000),
+                          initialEntryMode: DatePickerEntryMode.input,
+                        );
+                        if (picked != null) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  CcmsSearchPage(selectedDate: picked),
+                            ),
+                          );
+                        }
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: Icon(
+                          Icons.search,
+                          color: Colors.blue.shade900,
+                        ),
+                      )),
                 ],
               ),
               Padding(

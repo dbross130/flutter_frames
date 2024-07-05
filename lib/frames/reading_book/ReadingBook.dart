@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_frames/frames/reading_book/readingsearch.dart';
 import 'package:intl/intl.dart';
 
 class ReadingBook extends StatelessWidget {
@@ -73,21 +74,39 @@ class ReadingBook extends StatelessWidget {
                   const SizedBox(
                     width: 10,
                   ),
-                  Container(
-                    height: 30,
-                    width: 70,
-                    decoration: BoxDecoration(
-                        border: Border.all(), color: Colors.blue.shade50),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 8, bottom: 5),
-                      child: TextField(
-                        decoration: InputDecoration(
-                            hintText: 'SEARCH',
-                            hintStyle: TextStyle(
-                              fontSize: 10,
-                              color: Colors.blue.shade900,
-                              fontWeight: FontWeight.bold,
-                            )),
+                  GestureDetector(
+                    onTap: () async {
+                      final DateTime? picked = await showDatePicker(
+                        context: context,
+                        initialDate: DateTime.now(),
+                        firstDate: DateTime(2000),
+                        lastDate: DateTime(3000),
+                        initialEntryMode: DatePickerEntryMode.input,
+                      );
+                      if (picked != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                Readingsearchpage(selectedDate: picked),
+                          ),
+                        );
+                      }
+                    },
+                    child: Container(
+                      height: 30,
+                      width: 70,
+                      decoration: BoxDecoration(
+                          border: Border.all(), color: Colors.blue.shade50),
+                      child: Center(
+                        child: Text(
+                          'SEARCH',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 10,
+                            color: Colors.blue.shade900,
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -257,16 +276,10 @@ class ReadingBook extends StatelessWidget {
                                   border:
                                       Border.all(color: Colors.blue.shade900),
                                 ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Center(
-                                    child: Text(
-                                      '[IP1]',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.redAccent.shade700),
-                                    ),
+                                child: const Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: TextField(
+                                    cursorHeight: 15,
                                   ),
                                 ),
                               ),
@@ -323,6 +336,12 @@ class ReadingBook extends StatelessWidget {
                                   border:
                                       Border.all(color: Colors.blue.shade900),
                                 ),
+                                child: const Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: TextField(
+                                    cursorHeight: 15,
+                                  ),
+                                ),
                               ),
                             ),
                           ],
@@ -376,6 +395,12 @@ class ReadingBook extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   border:
                                       Border.all(color: Colors.blue.shade900),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: TextField(
+                                    cursorHeight: 15,
+                                  ),
                                 ),
                               ),
                             ),
@@ -431,6 +456,12 @@ class ReadingBook extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   border:
                                       Border.all(color: Colors.blue.shade900),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: TextField(
+                                    cursorHeight: 15,
+                                  ),
                                 ),
                               ),
                             ),
@@ -505,6 +536,12 @@ class ReadingBook extends StatelessWidget {
                                   border:
                                       Border.all(color: Colors.blue.shade900),
                                 ),
+                                child: const Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: TextField(
+                                    cursorHeight: 15,
+                                  ),
+                                ),
                               ),
                             ),
                           ],
@@ -558,6 +595,12 @@ class ReadingBook extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   border:
                                       Border.all(color: Colors.blue.shade900),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: TextField(
+                                    cursorHeight: 15,
+                                  ),
                                 ),
                               ),
                             ),
@@ -613,6 +656,12 @@ class ReadingBook extends StatelessWidget {
                                   border:
                                       Border.all(color: Colors.blue.shade900),
                                 ),
+                                child: const Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: TextField(
+                                    cursorHeight: 15,
+                                  ),
+                                ),
                               ),
                             ),
                           ],
@@ -667,6 +716,12 @@ class ReadingBook extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   border:
                                       Border.all(color: Colors.blue.shade900),
+                                ),
+                                child: const Padding(
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: TextField(
+                                    cursorHeight: 15,
+                                  ),
                                 ),
                               ),
                             ),
@@ -782,9 +837,9 @@ class ReadingBook extends StatelessWidget {
                                 child: const Center(child: Text('PDT')),
                               )),
                               const DataCell(Text('TANK1')),
-                              const DataCell(Text('')),
-                              const DataCell(Text('')),
-                              const DataCell(Text('')),
+                              const DataCell(TextField()),
+                              const DataCell(TextField()),
+                              const DataCell(TextField()),
                             ]),
                             DataRow(cells: [
                               DataCell(Container(
@@ -801,9 +856,9 @@ class ReadingBook extends StatelessWidget {
                                 child: const Center(child: Text('PDT')),
                               )),
                               const DataCell(Text('TANK1')),
-                              const DataCell(Text('')),
-                              const DataCell(Text('')),
-                              const DataCell(Text('')),
+                              const DataCell(TextField()),
+                              const DataCell(TextField()),
+                              const DataCell(TextField()),
                             ]),
                             DataRow(cells: [
                               DataCell(Container(
@@ -820,9 +875,9 @@ class ReadingBook extends StatelessWidget {
                                 child: const Center(child: Text('PDT')),
                               )),
                               const DataCell(Text('TANK1')),
-                              const DataCell(Text('')),
-                              const DataCell(Text('')),
-                              const DataCell(Text('')),
+                              const DataCell(TextField()),
+                              const DataCell(TextField()),
+                              const DataCell(TextField()),
                             ])
                           ]),
                         )

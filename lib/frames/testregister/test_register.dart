@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_frames/frames/testregister/testsearchpage.dart';
 import 'package:intl/intl.dart';
 
 class TestRegister extends StatelessWidget {
@@ -60,13 +61,39 @@ class TestRegister extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 10),
-                    child: Icon(
-                      Icons.search,
-                      color: Colors.blue.shade900,
-                    ),
-                  )
+                  // Padding(
+                  //   padding: const EdgeInsets.only(right: 10),
+                  //   child: Icon(
+                  //     Icons.search,
+                  //     color: Colors.blue.shade900,
+                  //   ),
+                  // )
+                  GestureDetector(
+                      onTap: () async {
+                        final DateTime? picked = await showDatePicker(
+                          context: context,
+                          initialDate: DateTime.now(),
+                          firstDate: DateTime(2000),
+                          lastDate: DateTime(3000),
+                          initialEntryMode: DatePickerEntryMode.input,
+                        );
+                        if (picked != null) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  TestSearchPage(selectedDate: picked),
+                            ),
+                          );
+                        }
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: Icon(
+                          Icons.search,
+                          color: Colors.blue.shade900,
+                        ),
+                      )),
                 ],
               ),
               Padding(

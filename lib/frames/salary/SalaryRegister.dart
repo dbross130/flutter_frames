@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_frames/frames/salary/salarysearchpage.dart';
 
 class SalaryRegister extends StatelessWidget {
   const SalaryRegister({super.key});
@@ -38,14 +39,42 @@ class SalaryRegister extends StatelessWidget {
                       ),
                     ),
                   ),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(left: 450, top: 30),
+                  //   child: Icon(
+                  //     Icons.search,
+                  //     size: 32,
+                  //     color: Colors.blue.shade900,
+                  //   ),
+                  // )
                   Padding(
                     padding: const EdgeInsets.only(left: 450, top: 30),
-                    child: Icon(
-                      Icons.search,
-                      size: 32,
-                      color: Colors.blue.shade900,
+                    child: GestureDetector(
+                      onTap: () async {
+                        final DateTime? picked = await showDatePicker(
+                          context: context,
+                          initialDate: DateTime.now(),
+                          firstDate: DateTime(2000),
+                          lastDate: DateTime(3000),
+                          initialEntryMode: DatePickerEntryMode.input,
+                        );
+                        if (picked != null) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  SalarySearchPage(selectedDate: picked),
+                            ),
+                          );
+                        }
+                      },
+                      child: Icon(
+                        Icons.search,
+                        size: 32,
+                        color: Colors.blue.shade900,
+                      ),
                     ),
-                  )
+                  ),
                 ],
               ),
               CustomizableTable(
@@ -327,11 +356,16 @@ class CustomizableTable extends StatelessWidget {
               return TableRow(
                 children: [
                   TableCell(child: Center(child: Text(rowData[0].toString()))),
-                  TableCell(child: Center(child: rowData[1] = const TextField())),
-                  TableCell(child: Center(child: rowData[2] = const TextField())),
-                  TableCell(child: Center(child: rowData[3] = const TextField())),
-                  TableCell(child: Center(child: rowData[4] = const TextField())),
-                  TableCell(child: Center(child: rowData[5] = const TextField())),
+                  TableCell(
+                      child: Center(child: rowData[1] = const TextField())),
+                  TableCell(
+                      child: Center(child: rowData[2] = const TextField())),
+                  TableCell(
+                      child: Center(child: rowData[3] = const TextField())),
+                  TableCell(
+                      child: Center(child: rowData[4] = const TextField())),
+                  TableCell(
+                      child: Center(child: rowData[5] = const TextField())),
                   TableCell(
                     child: Row(
                       children: [
@@ -381,7 +415,8 @@ class CustomizableTable extends StatelessWidget {
                       ],
                     ),
                   ),
-                  TableCell(child: Center(child: rowData[7] = const TextField())),
+                  TableCell(
+                      child: Center(child: rowData[7] = const TextField())),
                 ],
               );
             }),

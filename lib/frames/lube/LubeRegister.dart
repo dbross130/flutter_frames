@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_frames/calender/calender.dart';
+import 'package:flutter_frames/frames/lube/lubesearchpage.dart';
 import 'package:flutter_frames/frames/lube/monthchart.dart';
-import 'package:flutter_frames/frames/lube/overviewpage.dart';
 import 'package:intl/intl.dart';
 
 class LubeRegister extends StatelessWidget {
@@ -44,15 +43,45 @@ class LubeRegister extends StatelessWidget {
                       ),
                     ),
                   ),
+                  // Padding(
+                  //   padding:
+                  //       const EdgeInsets.only(left: 150, top: 30, bottom: 10),
+                  //   child: Icon(
+                  //     Icons.search,
+                  //     size: 32,
+                  //     color: Colors.blue.shade900,
+                  //   ),
+                  // )
                   Padding(
                     padding:
                         const EdgeInsets.only(left: 150, top: 30, bottom: 10),
-                    child: Icon(
-                      Icons.search,
-                      size: 32,
-                      color: Colors.blue.shade900,
-                    ),
-                  )
+                    child: GestureDetector(
+                        onTap: () async {
+                          final DateTime? picked = await showDatePicker(
+                            context: context,
+                            initialDate: DateTime.now(),
+                            firstDate: DateTime(2000),
+                            lastDate: DateTime(3000),
+                            initialEntryMode: DatePickerEntryMode.input,
+                          );
+                          if (picked != null) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    LubeSearchPage(selectedDate: picked),
+                              ),
+                            );
+                          }
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: Icon(
+                            Icons.search,
+                            color: Colors.blue.shade900,
+                          ),
+                        )),
+                  ),
                 ],
               ),
               CustomizableTable(

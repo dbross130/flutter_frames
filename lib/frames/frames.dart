@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_frames/frames/lube/LubeRegister.dart';
-import 'package:flutter_frames/frames/ReadingBook.dart';
-import 'package:flutter_frames/frames/SalaryRegister.dart';
+import 'package:flutter_frames/frames/reading_book/ReadingBook.dart';
+import 'package:flutter_frames/frames/salary/SalaryRegister.dart';
 
 import 'package:flutter_frames/frames/shortExcess/ShortOrExcess.dart';
-import 'package:flutter_frames/frames/ca_worksheet.dart';
-import 'package:flutter_frames/frames/ccms_register.dart';
+import 'package:flutter_frames/frames/caworksheet/ca_worksheet.dart';
+import 'package:flutter_frames/frames/ccms/ccms_register.dart';
 import 'package:flutter_frames/frames/invoice_reg/invoice_register.dart';
 import 'package:flutter_frames/frames/lpg/LpgRegister.dart';
 import 'package:flutter_frames/frames/ppc/ppc_book.dart';
-import 'package:flutter_frames/frames/test_register.dart';
+import 'package:flutter_frames/frames/testregister/test_register.dart';
 
 class FramesPage extends StatelessWidget {
   const FramesPage({super.key});
