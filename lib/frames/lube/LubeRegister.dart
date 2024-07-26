@@ -101,7 +101,7 @@ class LubeRegister extends StatelessWidget {
                   onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Monthchart(),
+                        builder: (context) => const Monthchart(),
                       )),
                   child: Container(
                     height: 30,

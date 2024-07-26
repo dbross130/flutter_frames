@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_frames/frames/ccms/ccmssearchpage.dart';
 import 'package:intl/intl.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: CCMSRegister(),
-  ));
-}
+
 
 class CCMSRegister extends StatelessWidget {
   const CCMSRegister({super.key});

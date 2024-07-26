@@ -728,10 +728,6 @@ class _CaWorksheetState extends State<CaWorksheet> {
 
   // Function to show time picker dialog
   Future<void> _showTimePickerDialog(BuildContext context) async {
-    final TimeOfDay? pickedTime = await showTimePicker(
-      context: context,
-      initialTime: TimeOfDay.now(),
-    );
     // if (pickedTime != null) {
     // setState(() {
     //       _selectedTime = pickedTime;

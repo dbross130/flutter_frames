@@ -32,21 +32,21 @@ class PPCBOOK extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: Colors.blue.shade900),
                       decoration:
-                          InputDecoration(suffixIcon: Icon(Icons.search)),
+                          const InputDecoration(suffixIcon: Icon(Icons.search)),
                     ),
                   )),
             ),
           ),
           Expanded(
             child: ListView.builder(
-              padding: EdgeInsets.only(left: 40, right: 40, bottom: 40),
+              padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
               itemCount: 5,
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => PPC(),
+                        builder: (context) => const PPC(),
                       )),
                   child: Container(
                     height: 50,
