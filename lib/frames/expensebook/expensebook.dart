@@ -412,10 +412,16 @@ class Expensebook extends StatelessWidget {
                               border: Border.all(color: Colors.blue.shade900)),
                           child: const Padding(
                             padding: EdgeInsets.all(8.0),
-                            child: Text(
-                              'TOTAL EXPENSE :',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'TOTAL EXPENSE :',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12),
+                                ),
+                                //TextField(),
+                              ],
                             ),
                           ),
                         ),
@@ -442,6 +448,7 @@ class Expensebook extends StatelessWidget {
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12),
                                       ),
+                                      //TextField()
                                     ],
                                   ),
                                 ),
@@ -457,11 +464,19 @@ class Expensebook extends StatelessWidget {
                                         color: Colors.blue.shade900)),
                                 child: const Padding(
                                   padding: EdgeInsets.all(8.0),
-                                  child: Text(
-                                    'ONLINE EXPENSE :',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 12),
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        'ONLINE EXPENSE :',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12),
+                                      ),
+                                      SizedBox(
+                                        width: 50,
+                                      ),
+                                      // TextField()
+                                    ],
                                   ),
                                 ),
                               ),
