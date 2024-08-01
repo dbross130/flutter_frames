@@ -26,7 +26,7 @@ class MangersMonthlySalespage extends StatelessWidget {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsets.only(right: 1500, top: 30, bottom: 50),
+                        const EdgeInsets.only(top: 30, bottom: 50, right: 1000),
                     child: Container(
                       height: 30,
                       width: 150,
@@ -62,16 +62,18 @@ class MangersMonthlySalespage extends StatelessWidget {
                         }
                       },
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 900, bottom: 50),
+                        padding: const EdgeInsets.only(
+                            bottom: 50, top: 30, left: 1600),
                         child: Icon(
                           Icons.search,
                           color: Colors.blue.shade900,
+                          size: 30,
                         ),
                       )),
                 ],
               ),
-              CustomizableTable(
-                headers: const [
+              const CustomizableTable(
+                headers: [
                   'DATE',
                   'WRONG FUEL',
                   'EXPENSE',
@@ -104,7 +106,8 @@ class CustomizableTable extends StatelessWidget {
   final List<String> headers;
   final int itemCount;
 
-  const CustomizableTable({super.key, required this.headers, required this.itemCount});
+  const CustomizableTable(
+      {super.key, required this.headers, required this.itemCount});
 
   @override
   Widget build(BuildContext context) {
@@ -117,7 +120,7 @@ class CustomizableTable extends StatelessWidget {
           border: TableBorder.all(),
           columnWidths: const {
             0: FixedColumnWidth(100.0),
-            1: FixedColumnWidth(400.0),
+            1: FixedColumnWidth(600.0),
             2: FixedColumnWidth(200.0),
             3: FixedColumnWidth(150.0),
             4: FixedColumnWidth(150.0),
@@ -176,6 +179,7 @@ class CustomizableTable extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
+                            flex: 3,
                             child: Center(
                               child: Text(
                                 'PRODUCT 1',
@@ -192,6 +196,7 @@ class CustomizableTable extends StatelessWidget {
                             color: Colors.black,
                           ),
                           Expanded(
+                            flex: 3,
                             child: Center(
                               child: Text(
                                 'PRODUCT 2',
@@ -208,6 +213,7 @@ class CustomizableTable extends StatelessWidget {
                             color: Colors.black,
                           ),
                           Expanded(
+                            flex: 3,
                             child: Center(
                               child: Text(
                                 'PRODUCT 3',
@@ -224,6 +230,7 @@ class CustomizableTable extends StatelessWidget {
                             color: Colors.black,
                           ),
                           Expanded(
+                            flex: 3,
                             child: Center(
                               child: Text(
                                 'PRODUCT 4',
@@ -454,7 +461,12 @@ class CustomizableTable extends StatelessWidget {
                     child: Row(
                       children: [
                         Expanded(
-                          child: Center(child: rowData[1] = const TextField()),
+                          flex: 3,
+                          child: Center(
+                              child: rowData[1] = const TextField(
+                            decoration:
+                                InputDecoration(border: UnderlineInputBorder()),
+                          )),
                         ),
                         Container(
                           width: 1.0,
@@ -462,7 +474,12 @@ class CustomizableTable extends StatelessWidget {
                           color: Colors.black,
                         ),
                         Expanded(
-                          child: Center(child: rowData[1] = const TextField()),
+                          flex: 3,
+                          child: Center(
+                              child: rowData[1] = const TextField(
+                            decoration:
+                                InputDecoration(border: InputBorder.none),
+                          )),
                         ),
                         Container(
                           width: 1.0,
@@ -470,7 +487,12 @@ class CustomizableTable extends StatelessWidget {
                           color: Colors.black,
                         ),
                         Expanded(
-                          child: Center(child: rowData[1] = const TextField()),
+                          flex: 3,
+                          child: Center(
+                              child: rowData[1] = const TextField(
+                            decoration:
+                                InputDecoration(border: InputBorder.none),
+                          )),
                         ),
                         Container(
                           width: 1.0,
@@ -478,37 +500,81 @@ class CustomizableTable extends StatelessWidget {
                           color: Colors.black,
                         ),
                         Expanded(
-                          child: Center(child: rowData[1] = const TextField()),
+                          flex: 3,
+                          child: Center(
+                              child: rowData[1] = const TextField(
+                            decoration:
+                                InputDecoration(border: InputBorder.none),
+                          )),
                         ),
                       ],
                     ),
                   ),
                   TableCell(
-                      child: Center(child: rowData[2] = const TextField())),
+                      child: Center(
+                          child: rowData[2] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[3] = const TextField())),
+                      child: Center(
+                          child: rowData[3] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[4] = const TextField())),
+                      child: Center(
+                          child: rowData[4] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[5] = const TextField())),
+                      child: Center(
+                          child: rowData[5] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[6] = const TextField())),
+                      child: Center(
+                          child: rowData[6] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[7] = const TextField())),
+                      child: Center(
+                          child: rowData[7] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[8] = const TextField())),
+                      child: Center(
+                          child: rowData[8] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[9] = const TextField())),
+                      child: Center(
+                          child: rowData[9] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[10] = const TextField())),
+                      child: Center(
+                          child: rowData[10] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[11] = const TextField())),
+                      child: Center(
+                          child: rowData[11] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[12] = const TextField())),
+                      child: Center(
+                          child: rowData[12] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[13] = const TextField())),
+                      child: Center(
+                          child: rowData[13] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                   TableCell(
-                      child: Center(child: rowData[14] = const TextField())),
+                      child: Center(
+                          child: rowData[14] = const TextField(
+                    decoration: InputDecoration(border: InputBorder.none),
+                  ))),
                 ],
               );
             }),

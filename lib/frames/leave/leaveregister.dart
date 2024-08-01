@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_frames/frames/leave/leave_request.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class Leaveregister extends StatefulWidget {
@@ -86,18 +85,16 @@ class _LeaveregisterState extends State<Leaveregister> {
               ),
               Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: GestureDetector(
-                  onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LeaveRequest(),
-                      )),
-                  child: Container(
-                    width: 150,
-                    height: 30,
-                    decoration: BoxDecoration(
-                        color: Colors.green.shade700,
-                        borderRadius: BorderRadius.circular(8)),
+                child: Container(
+                  width: 150,
+                  height: 30,
+                  decoration: BoxDecoration(
+                      color: Colors.green.shade700,
+                      borderRadius: BorderRadius.circular(8)),
+                  child: TextButton(
+                    onPressed: () {
+                      _showLeaveRequestDialog(context);
+                    },
                     child: const Center(
                       child: Text(
                         'REQUEST - LEAVE',
@@ -114,6 +111,222 @@ class _LeaveregisterState extends State<Leaveregister> {
           ),
         ),
       ),
+    );
+  }
+
+  void _showLeaveRequestDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          // elevation: 50,
+          title: Center(
+            child: Text(
+              'Leave Request',
+              style: TextStyle(
+                  color: Colors.red.shade900, fontWeight: FontWeight.bold),
+            ),
+          ),
+          content: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 500),
+                  child: Row(
+                    children: [
+                      const Text(
+                        'NAME:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                        height: 30,
+                        width: 200,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.blue.shade900,
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            DropdownButton(
+                              underline: Container(),
+                              icon: const Icon(
+                                Icons.arrow_drop_down,
+                                color: Colors.black,
+                                size: 30,
+                              ),
+                              items: [],
+                              onChanged: (value) {},
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      const Text(
+                        'START DATE:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                          height: 30,
+                          width: 200,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.blue.shade900,
+                            ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: TextField(
+                              decoration:
+                                  InputDecoration(border: InputBorder.none),
+                            ),
+                          )),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 550, top: 20),
+                  child: Row(
+                    children: [
+                      const Text(
+                        'DESIGNATION:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                          height: 30,
+                          width: 200,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.blue.shade900,
+                            ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: TextField(
+                              decoration:
+                                  InputDecoration(border: InputBorder.none),
+                            ),
+                          )),
+                      const SizedBox(
+                        width: 25,
+                      ),
+                      const Text(
+                        'END DATE:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                          height: 30,
+                          width: 200,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.blue.shade900,
+                            ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: TextField(
+                              decoration:
+                                  InputDecoration(border: InputBorder.none),
+                            ),
+                          )),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 520, top: 20),
+                  child: Row(
+                    children: [
+                      const Text(
+                        'REASON:',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                          height: 30,
+                          width: 500,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.blue.shade900,
+                            ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: TextField(
+                              decoration:
+                                  InputDecoration(border: InputBorder.none),
+                            ),
+                          )),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            // TextButton(
+            //   onPressed: () {
+            //     Navigator.of(context).pop(); // Close the dialog
+            //   },
+            //   child: Text('Cancel'),
+            // ),
+            TextButton(
+              onPressed: () {
+                // Add your leave request logic here
+                Navigator.of(context).pop(); // Close the dialog
+              },
+              child: Container(
+                  height: 25,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.green.shade600,
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'SUBMIT',
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  )),
+            ),
+          ],
+        );
+      },
     );
   }
 }

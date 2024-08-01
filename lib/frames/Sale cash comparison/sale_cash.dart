@@ -27,14 +27,14 @@ class SaleCash extends StatelessWidget {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(right: 100, top: 40),
+                    padding: const EdgeInsets.only(right: 980, top: 50),
                     child: Container(
                       height: 30,
                       width: 120,
                       decoration: BoxDecoration(border: Border.all()),
                       child: Center(
                         child: Text(
-                          DateFormat('MM-yyyy').format(DateTime.now()),
+                          DateFormat('dd-MM-yyyy').format(DateTime.now()),
                           style: const TextStyle(
                               fontSize: 12, fontWeight: FontWeight.bold),
                         ),
@@ -61,233 +61,492 @@ class SaleCash extends StatelessWidget {
                         }
                       },
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 40),
+                        padding: const EdgeInsets.only(top: 50),
                         child: Icon(
                           Icons.search,
                           color: Colors.blue.shade900,
+                          size: 30,
                         ),
                       )),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10, left: 10),
-                child: DataTable(border: TableBorder.all(), columns: const [
-                  DataColumn(label: Text('')),
-                  DataColumn(label: Text('VOLUME')),
-                  DataColumn(label: Text('RATE')),
-                  DataColumn(label: Text('AMOUNT')),
-                ], rows: [
-                  DataRow(cells: [
-                    DataCell(Text(
-                      'PRODUCT 1',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.blue.shade900,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )),
-                    const DataCell(TextField()),
-                    const DataCell(TextField()),
-                    const DataCell(TextField()),
-                  ]),
-                  DataRow(cells: [
-                    DataCell(Text(
-                      'PRODUCT 2',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.blue.shade900,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )),
-                    const DataCell(TextField()),
-                    const DataCell(TextField()),
-                    const DataCell(TextField()),
-                  ]),
-                  DataRow(cells: [
-                    DataCell(Text(
-                      'PRODUCT 3',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.blue.shade900,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )),
-                    const DataCell(TextField()),
-                    const DataCell(TextField()),
-                    const DataCell(TextField()),
-                  ])
-                ]),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10, bottom: 10),
-                child: Container(
-                  height: 50,
-                  width: 433,
-                  decoration: BoxDecoration(border: Border.all()),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 150),
-                        child: Text(
-                          'TOTAL AMOUNT:',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.blue.shade900,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Container(
-                        width: 150,
-                        height: 30,
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.blue.shade900)),
-                        child: const Padding(
-                          padding: EdgeInsets.only(left: 5),
-                          child: TextField(
-                            cursorHeight: 15,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10, left: 10),
-                child: DataTable(
-                    columnSpacing: 350,
-                    headingTextStyle: TextStyle(color: Colors.blue.shade900),
-                    border: TableBorder.all(),
-                    columns: const [
-                      DataColumn(
-                          label: Text(
-                        '2T',
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )),
-                      DataColumn(label: TextField()),
-                    ],
-                    rows: [
-                      DataRow(cells: [
-                        DataCell(Text(
-                          'LUBE',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.blue.shade900,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )),
-                        const DataCell(TextField()),
-                      ]),
-                      DataRow(cells: [
-                        DataCell(Text(
-                          'BW',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.blue.shade900,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )),
-                        const DataCell(TextField()),
-                      ]),
-                      DataRow(cells: [
-                        DataCell(Text(
-                          'LPG',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.blue.shade900,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )),
-                        const DataCell(TextField()),
-                      ])
-                    ]),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10, bottom: 10),
-                child: Container(
-                  height: 50,
-                  width: 435,
-                  decoration: BoxDecoration(border: Border.all()),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 150),
-                        child: Text(
-                          'TOTAL AMOUNT:',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.blue.shade900,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Container(
-                        width: 150,
-                        height: 30,
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.blue.shade900)),
-                        child: const Padding(
-                          padding: EdgeInsets.only(left: 5),
-                          child: TextField(
-                            cursorHeight: 15,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 100),
-                    child: Text(
-                      'EXPENSE:',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    padding: const EdgeInsets.all(50.0),
+                    child: Column(
+                      children: [
+                        DataTable(border: TableBorder.all(), columns: const [
+                          DataColumn(label: Text('')),
+                          DataColumn(label: Text('VOLUME')),
+                          DataColumn(label: Text('RATE')),
+                          DataColumn(label: Text('AMOUNT')),
+                        ], rows: [
+                          DataRow(cells: [
+                            DataCell(Text(
+                              'PRODUCT 1',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.blue.shade900,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )),
+                            const DataCell(TextField()),
+                            const DataCell(TextField()),
+                            const DataCell(TextField()),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text(
+                              'PRODUCT 2',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.blue.shade900,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )),
+                            const DataCell(TextField()),
+                            const DataCell(TextField()),
+                            const DataCell(TextField()),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text(
+                              'PRODUCT 3',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.blue.shade900,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )),
+                            const DataCell(TextField()),
+                            const DataCell(TextField()),
+                            const DataCell(TextField()),
+                          ])
+                        ]),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 10),
+                          child: Container(
+                            height: 50,
+                            width: 433,
+                            decoration: BoxDecoration(border: Border.all()),
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 150),
+                                  child: Text(
+                                    'TOTAL AMOUNT:',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.blue.shade900,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                Container(
+                                  width: 150,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Colors.blue.shade900)),
+                                  child: const Padding(
+                                    padding: EdgeInsets.only(left: 5),
+                                    child: TextField(
+                                      cursorHeight: 15,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30, left: 10),
+                          child: DataTable(
+                              columnSpacing: 350,
+                              headingTextStyle:
+                                  TextStyle(color: Colors.blue.shade900),
+                              border: TableBorder.all(),
+                              columns: const [
+                                DataColumn(
+                                    label: Text(
+                                  '2T',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )),
+                                DataColumn(label: TextField()),
+                              ],
+                              rows: [
+                                DataRow(cells: [
+                                  DataCell(Text(
+                                    'LUBE',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.blue.shade900,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )),
+                                  const DataCell(TextField()),
+                                ]),
+                                DataRow(cells: [
+                                  DataCell(Text(
+                                    'BW',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.blue.shade900,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )),
+                                  const DataCell(TextField()),
+                                ]),
+                                DataRow(cells: [
+                                  DataCell(Text(
+                                    'LPG',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.blue.shade900,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )),
+                                  const DataCell(TextField()),
+                                ])
+                              ]),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, bottom: 30),
+                          child: Container(
+                            height: 50,
+                            width: 435,
+                            decoration: BoxDecoration(border: Border.all()),
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 150),
+                                  child: Text(
+                                    'TOTAL AMOUNT:',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.blue.shade900,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                Container(
+                                  width: 150,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Colors.blue.shade900)),
+                                  child: const Padding(
+                                    padding: EdgeInsets.only(left: 5),
+                                    child: TextField(
+                                      cursorHeight: 15,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.only(left: 100),
+                              child: Text(
+                                'EXPENSE:',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Container(
+                              width: 250,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.blue.shade900)),
+                              child: const Padding(
+                                padding: EdgeInsets.only(left: 5),
+                                child: TextField(
+                                  cursorHeight: 15,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.only(left: 35),
+                              child: Text(
+                                'TOTAL AMOUNT :',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Container(
+                              width: 250,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.blue.shade900)),
+                              child: const TextField(
+                                cursorHeight: 15,
+                              ),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.only(right: 290, bottom: 10),
+                              child: Text(
+                                'REASON:',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 30, bottom: 10),
+                              child: Container(
+                                  height: 80,
+                                  width: 400,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Colors.blue.shade900)),
+                                  child: const TextField(
+                                    decoration: InputDecoration(
+                                      border: InputBorder.none,
+                                    ),
+                                  )),
+                            )
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  Container(
-                    width: 250,
-                    height: 30,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blue.shade900)),
-                    child: const Padding(
-                      padding: EdgeInsets.only(left: 5),
-                      child: TextField(
-                        cursorHeight: 15,
-                      ),
+                  Padding(
+                    padding: const EdgeInsets.all(50.0),
+                    child: DataTable(
+                      dataRowMaxHeight: 50,
+                      border: TableBorder.all(),
+                      columns: [
+                        DataColumn(
+                            label: Padding(
+                          padding: const EdgeInsets.only(left: 100),
+                          child: Text(
+                            'CASH',
+                            style: TextStyle(
+                                color: Colors.blue.shade900,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        )),
+                        const DataColumn(
+                            label: Padding(
+                          padding: EdgeInsets.only(left: 300),
+                          child: TextField(),
+                        )),
+                      ],
+                      rows: [
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'COIN',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'ICICI',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'FED',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'SIB',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'PHONE PE',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'PATYM',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'PPC',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'CREDIT',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'CCMS',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'MLA COUPON',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'LUBE',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'BW',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              'LPG',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Padding(
+                            padding: const EdgeInsets.only(left: 100),
+                            child: Text(
+                              '2T',
+                              style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          )),
+                          DataCell(TextField()),
+                        ]),
+                      ],
                     ),
                   )
                 ],
               ),
-              SizedBox(
-                height: 10,
-              ),
               Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 35),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 770),
                     child: Text(
                       'TOTAL AMOUNT :',
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Container(
@@ -295,36 +554,39 @@ class SaleCash extends StatelessWidget {
                     height: 30,
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.blue.shade900)),
-                    child: TextField(
+                    child: const TextField(
                       cursorHeight: 15,
                     ),
                   )
                 ],
               ),
-              Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 290, bottom: 10),
-                    child: Text(
-                      'REASON:',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              Padding(
+                padding: const EdgeInsets.only(left: 750, top: 30),
+                child: Column(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(right: 270, bottom: 10),
+                      child: Text(
+                        'DIFFERENCE:',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30, bottom: 10),
-                    child: Container(
-                        height: 80,
-                        width: 400,
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.blue.shade900)),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                          ),
-                        )),
-                  )
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30, bottom: 10),
+                      child: Container(
+                          height: 40,
+                          width: 400,
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.red.shade900)),
+                          child: const TextField(
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                            ),
+                          )),
+                    )
+                  ],
+                ),
               ),
             ],
           ),

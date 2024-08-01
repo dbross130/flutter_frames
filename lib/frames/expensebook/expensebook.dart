@@ -368,7 +368,8 @@ class Expensebook extends StatelessWidget {
                                     ),
                                   ),
                                 )),
-                              ]),
+                              ]
+                              ),
                               const DataRow(cells: [
                                 DataCell(Text('3')),
                                 DataCell(TextField()),
