@@ -119,8 +119,8 @@ class SalesFrst extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.blue.shade100,
                         ),
-                        child: Center(
-                          child: const Text(
+                        child: const Center(
+                          child: Text(
                             'LUBE',
                             style: TextStyle(
                               color: Colors.black,
@@ -146,8 +146,8 @@ class SalesFrst extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.blue.shade100,
                       ),
-                      child: Center(
-                        child: const Text(
+                      child: const Center(
+                        child: Text(
                           'BW',
                           style: TextStyle(
                             color: Colors.black,
@@ -158,7 +158,7 @@ class SalesFrst extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   GestureDetector(
@@ -172,8 +172,8 @@ class SalesFrst extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.blue.shade100,
                       ),
-                      child: Center(
-                        child: const Text(
+                      child: const Center(
+                        child: Text(
                           'LPG',
                           style: TextStyle(
                             color: Colors.black,
@@ -184,7 +184,7 @@ class SalesFrst extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   GestureDetector(
@@ -198,8 +198,8 @@ class SalesFrst extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.blue.shade100,
                       ),
-                      child: Center(
-                        child: const Text(
+                      child: const Center(
+                        child: Text(
                           '2T',
                           style: TextStyle(
                             color: Colors.black,
@@ -241,8 +241,8 @@ class SalesFrst extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.blue.shade100,
                         ),
-                        child: Center(
-                          child: const Text(
+                        child: const Center(
+                          child: Text(
                             'CATEGORY 1',
                             style: TextStyle(
                               color: Colors.black,
@@ -268,8 +268,8 @@ class SalesFrst extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.blue.shade100,
                       ),
-                      child: Center(
-                        child: const Text(
+                      child: const Center(
+                        child: Text(
                           'CATEGORY 2',
                           style: TextStyle(
                             color: Colors.black,
@@ -296,7 +296,7 @@ class SalesFrst extends StatelessWidget {
           return AlertDialog(
             actions: <Widget>[
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
                     Center(
@@ -305,7 +305,7 @@ class SalesFrst extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => SalesRegister(),
+                                builder: (context) => const SalesRegister(),
                               ));
                         },
                         child: Container(
@@ -315,8 +315,8 @@ class SalesFrst extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                             color: Colors.blue.shade100,
                           ),
-                          child: Center(
-                            child: const Text(
+                          child: const Center(
+                            child: Text(
                               'VOLUME',
                               style: TextStyle(
                                 color: Colors.black,
@@ -336,7 +336,7 @@ class SalesFrst extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SalesRegister(),
+                              builder: (context) => const SalesRegister(),
                             ));
                       },
                       child: Container(
@@ -346,8 +346,8 @@ class SalesFrst extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.blue.shade100,
                         ),
-                        child: Center(
-                          child: const Text(
+                        child: const Center(
+                          child: Text(
                             'VOLUME',
                             style: TextStyle(
                               color: Colors.black,

@@ -25,7 +25,7 @@ class PurchaseMainPage extends StatelessWidget {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsets.only(top: 30, bottom: 10, right: 1530),
+                        const EdgeInsets.only(top: 30, bottom: 10, right: 2730),
                     child: Container(
                       height: 30,
                       width: 150,
@@ -71,7 +71,7 @@ class PurchaseMainPage extends StatelessWidget {
                 height: 30,
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 1730, bottom: 30),
+                padding: const EdgeInsets.only(right: 2750, bottom: 30),
                 child: Container(
                   height: 30,
                   width: 150,

@@ -15,6 +15,7 @@ class QrScan extends StatefulWidget {
 
 class _QrScanState extends State<QrScan> {
   String? selectedQrProvider;
+  // ignore: non_constant_identifier_names
   String? SelectedBank;
   DateTime _currentDate =
       DateTime.now(); // Declare variable to hold current date

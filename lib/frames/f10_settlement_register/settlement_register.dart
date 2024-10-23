@@ -44,6 +44,7 @@ class DottedBorderPainter extends CustomPainter {
 
 class SettlementRegister extends StatefulWidget {
   @override
+  // ignore: library_private_types_in_public_api
   _SettlementRegisterState createState() => _SettlementRegisterState();
 }
 

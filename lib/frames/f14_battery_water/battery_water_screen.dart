@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_frames/frames/searchpage.dart';
 
 class BatteryWaterScreen extends StatefulWidget {
+  const BatteryWaterScreen({super.key});
+
   @override
   State<BatteryWaterScreen> createState() => _BatteryWaterScreenState();
 }
@@ -105,14 +107,14 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                         );
                       }
                     },
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 1020),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 1020),
                       child: Icon(Icons.search),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: SingleChildScrollView(
@@ -204,7 +206,7 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                       // Blank row after headings
                       DataRow(cells: [
                         DataCell(Container()), // Blank cell
-                        DataCell(
+                        const DataCell(
                           Center(
                             child: TextField(
                               decoration: InputDecoration(
@@ -213,7 +215,7 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                             ),
                           ),
                         ),
-                        DataCell(
+                        const DataCell(
                           Center(
                             child: TextField(
                               decoration: InputDecoration(
@@ -222,7 +224,7 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                             ),
                           ),
                         ),
-                        DataCell(
+                        const DataCell(
                           Center(
                             child: TextField(
                               decoration: InputDecoration(
@@ -231,7 +233,7 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                             ),
                           ),
                         ),
-                        DataCell(
+                        const DataCell(
                           Center(
                             child: TextField(
                               decoration: InputDecoration(
@@ -240,7 +242,7 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                             ),
                           ),
                         ),
-                        DataCell(
+                        const DataCell(
                           Center(
                             child: TextField(
                               decoration: InputDecoration(
@@ -256,11 +258,11 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                             SizedBox(
                               width: 80,
                               child: ConstrainedBox(
-                                constraints: BoxConstraints(maxHeight: 100),
+                                constraints: const BoxConstraints(maxHeight: 100),
                                 child: TextField(
                                   controller: _controllers[index][0],
                                   maxLines: null,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: InputBorder.none,
                                   ),
                                 ),
@@ -271,11 +273,11 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                             SizedBox(
                               width: 200,
                               child: ConstrainedBox(
-                                constraints: BoxConstraints(maxHeight: 100),
+                                constraints: const BoxConstraints(maxHeight: 100),
                                 child: TextField(
                                   controller: _controllers[index][0],
                                   maxLines: null,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: InputBorder.none,
                                   ),
                                 ),
@@ -286,11 +288,11 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                             SizedBox(
                               width: 200,
                               child: ConstrainedBox(
-                                constraints: BoxConstraints(maxHeight: 100),
+                                constraints: const BoxConstraints(maxHeight: 100),
                                 child: TextField(
                                   controller: _controllers[index][1],
                                   maxLines: null,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: InputBorder.none,
                                   ),
                                 ),
@@ -301,11 +303,11 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                             SizedBox(
                               width: 200,
                               child: ConstrainedBox(
-                                constraints: BoxConstraints(maxHeight: 100),
+                                constraints: const BoxConstraints(maxHeight: 100),
                                 child: TextField(
                                   controller: _controllers[index][2],
                                   maxLines: null,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: InputBorder.none,
                                   ),
                                 ),
@@ -316,11 +318,11 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                             SizedBox(
                               width: 200,
                               child: ConstrainedBox(
-                                constraints: BoxConstraints(maxHeight: 100),
+                                constraints: const BoxConstraints(maxHeight: 100),
                                 child: TextField(
                                   controller: _controllers[index][3],
                                   maxLines: null,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: InputBorder.none,
                                   ),
                                 ),
@@ -331,11 +333,11 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                             SizedBox(
                               width: 200,
                               child: ConstrainedBox(
-                                constraints: BoxConstraints(maxHeight: 100),
+                                constraints: const BoxConstraints(maxHeight: 100),
                                 child: TextField(
                                   controller: _controllers[index][4],
                                   maxLines: null,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: InputBorder.none,
                                   ),
                                 ),
@@ -348,7 +350,7 @@ class _BatteryWaterScreenState extends State<BatteryWaterScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               )
             ],

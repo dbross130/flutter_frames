@@ -110,7 +110,7 @@ class DispensaryunitsPage extends StatelessWidget {
                                 color: Colors.blue.shade900,
                                 size: 40,
                               ),
-                              items: [],
+                              items: const [],
                               onChanged: (value) {},
                             ),
                           )),
@@ -122,7 +122,7 @@ class DispensaryunitsPage extends StatelessWidget {
                                 color: Colors.blue.shade900,
                                 size: 40,
                               ),
-                              items: [],
+                              items: const [],
                               onChanged: (value) {},
                             ),
                           )),
@@ -222,7 +222,7 @@ class DispensaryunitsPage extends StatelessWidget {
                           )),
                         ]),
                         const DataRow(cells: [
-                          DataCell(const TextField(
+                          DataCell(TextField(
                             decoration:
                                 InputDecoration(border: InputBorder.none),
                           )),

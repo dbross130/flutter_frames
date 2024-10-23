@@ -30,36 +30,36 @@ class DensityRegister extends StatelessWidget {
                   width: 180,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 159, 208, 248),
+                    color: const Color.fromARGB(255, 159, 208, 248),
                   ),
                   child: Center(
                     child: DropdownButton(
                       iconEnabledColor: Colors.white,
-                      items: [
+                      items: const [
                         DropdownMenuItem(
-                          child: Text('Product 1'),
                           value: 'Product 1',
+                          child: Text('Product 1'),
                         ),
                         DropdownMenuItem(
-                          child: Text('Product 2'),
                           value: 'Product 2',
+                          child: Text('Product 2'),
                         ),
                         DropdownMenuItem(
-                          child: Text('Product 3'),
                           value: 'Product 3',
+                          child: Text('Product 3'),
                         ),
                       ],
                       onChanged: (value) {
                         // Handle dropdown value change
                       },
-                      hint: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                      hint: const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8),
                         child: Center(
                           child: Text(
                             'Product name',
                             style: TextStyle(
                               fontSize: 15,
-                              color: const Color.fromARGB(255, 7, 75, 134),
+                              color: Color.fromARGB(255, 7, 75, 134),
                               backgroundColor: Colors.yellow,
                             ),
                           ),
@@ -137,8 +137,8 @@ class DensityRegister extends StatelessWidget {
                             );
                           }
                         },
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 1020),
+                        child: const Padding(
+                          padding: EdgeInsets.only(left: 1020),
                           child: Icon(Icons.search),
                         ),
                       ),
@@ -157,7 +157,7 @@ class DensityRegister extends StatelessWidget {
                 ],
                 itemCount: 31,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Center(
@@ -176,7 +176,7 @@ class DensityRegister extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],
@@ -616,8 +616,8 @@ class CustomizableTable extends StatelessWidget {
                   ),
                   TableCell(
                       child: Center(
-                          child: rowData[2] = Padding(
-                    padding: const EdgeInsets.all(8.0),
+                          child: rowData[2] = const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: TextField(
                       decoration: InputDecoration(border: InputBorder.none),
                     ),

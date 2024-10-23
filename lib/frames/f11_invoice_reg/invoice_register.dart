@@ -48,19 +48,7 @@ class InvoiceRegister extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Padding(
-                  //   padding: const EdgeInsets.only(
-                  //     left: 300,
-                  //     top: 30,
-                  //     bottom: 10,
-                  //     right: 50,
-                  //   ),
-                  //   child: Icon(
-                  //     Icons.search,
-                  //     size: 32,
-                  //     color: Colors.blue.shade900,
-                  //   ),
-                  // )
+                  
                   Padding(
                     padding: const EdgeInsets.only(
                         left: 300, top: 30, bottom: 10, right: 50),

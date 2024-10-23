@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_frames/frames/SUB.F38%20-%20SCHEME%20DETAILED/SUB.F38_scheme.dart';
 import 'package:flutter_frames/frames/f10_settlement_register/settlement_register.dart';
 import 'package:flutter_frames/frames/f12_attendence_reg/attendance_register.dart';
 import 'package:flutter_frames/frames/f14_battery_water/battery_water_screen.dart';
@@ -25,7 +26,18 @@ import 'package:flutter_frames/frames/f1_reading_book/ReadingBook.dart';
 import 'package:flutter_frames/frames/f17_salary.dart/SalaryRegister.dart';
 import 'package:flutter_frames/frames/f31_salesRegister/sales_frst.dart';
 import 'package:flutter_frames/frames/f19_shortExcess/ShortOrExcess.dart';
+import 'package:flutter_frames/frames/f36_settings/settings_page.dart';
+import 'package:flutter_frames/frames/f37_tankstock/tank_stock.dart';
+import 'package:flutter_frames/frames/f38_scheme_reg/schemes_register.dart';
+import 'package:flutter_frames/frames/f39_finance-sheet/finance_sheet.dart';
 import 'package:flutter_frames/frames/f3_caworksheet/ca_worksheet.dart';
+import 'package:flutter_frames/frames/f40_salary_slip/salary_slip.dart';
+import 'package:flutter_frames/frames/f41_stock_chart/stock_chart.dart';
+import 'package:flutter_frames/frames/f42_employee_credit/employee_credit.dart';
+import 'package:flutter_frames/frames/f43_2t_register/t_register.dart';
+import 'package:flutter_frames/frames/f44_margin/margin.dart';
+import 'package:flutter_frames/frames/f45_cng/cng.dart';
+import 'package:flutter_frames/frames/f46_loan/loan.dart';
 import 'package:flutter_frames/frames/f4_depositbook/deposit_book.dart';
 import 'package:flutter_frames/frames/f6_density_reg/density_register.dart';
 import 'package:flutter_frames/frames/f8_creditcustomer_page/cr_customers.dart';
@@ -34,6 +46,10 @@ import 'package:flutter_frames/frames/f11_invoice_reg/invoice_register.dart';
 import 'package:flutter_frames/frames/f15_lpg/LpgRegister.dart';
 import 'package:flutter_frames/frames/f7_ppc/ppc_book.dart';
 import 'package:flutter_frames/frames/f5_testregister/test_register.dart';
+import 'package:flutter_frames/frames/sub_f7/sub_f7_ppc.dart';
+
+import 'SUB.F21/SUB.F21_EXPENSE.dart';
+import 'SUB.F8 – CREDIT PER DAY/SUB.F8 – credit.dart';
 
 class FramesPage extends StatelessWidget {
   const FramesPage({super.key});
@@ -203,7 +219,7 @@ class FramesPage extends StatelessWidget {
                           onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => DensityRegister(),
+                                builder: (context) => const DensityRegister(),
                               )),
                           child: Container(
                             height: 30,
@@ -229,7 +245,7 @@ class FramesPage extends StatelessWidget {
                           onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => PPCBOOK(),
+                                builder: (context) => const PPCBOOK(),
                               )),
                           child: Container(
                             height: 30,
@@ -360,7 +376,7 @@ class FramesPage extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    AttendanceRegisterScreen(),
+                                    const AttendanceRegisterScreen(),
                               )),
                           child: Container(
                             height: 30,
@@ -412,7 +428,8 @@ class FramesPage extends StatelessWidget {
                           onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => BatteryWaterScreen(),
+                                builder: (context) =>
+                                    const BatteryWaterScreen(),
                               )),
                           child: Container(
                             height: 30,
@@ -1016,13 +1033,15 @@ class FramesPage extends StatelessWidget {
                           ),
                         ),
                       ),
+
+                      ///
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: GestureDetector(
                           onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const PurchaseRegister(),
+                                builder: (context) => SettingsPage(),
                               )),
                           child: Container(
                             height: 40,
@@ -1051,7 +1070,7 @@ class FramesPage extends StatelessWidget {
                           onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const PurchaseRegister(),
+                                builder: (context) => const TankStock(),
                               )),
                           child: Container(
                             height: 40,
@@ -1080,7 +1099,7 @@ class FramesPage extends StatelessWidget {
                           onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const PurchaseRegister(),
+                                builder: (context) => const SchemesRegister(),
                               )),
                           child: Container(
                             height: 40,
@@ -1093,6 +1112,350 @@ class FramesPage extends StatelessWidget {
                               padding: const EdgeInsets.only(left: 30),
                               child: Text(
                                 'F38-SCHEMES REGISTER',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const FinanceSheet(),
+                              )),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'F39-FINANCE SHEET',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SalarySlip(),
+                              )),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'F40-SALARY SLIP',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const StockChart(),
+                              )),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'F41-STOCK CHART',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const EmployeeCredit(),
+                              )),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'F42-EMPLOYEE CREDIT',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const TRegister(),
+                              )),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'F43-2T REGISTER',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Margin(),
+                              )),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'F44-MARGIN',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Cng(),
+                              )),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'F45-CNG',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Loan(),
+                              )),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'F46-LOAN',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SubF7Ppc())),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'SUB.F7 - PPC PER DAY',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Subf8_Credit())),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'SUB.F8 – CREDIT PER DAY',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>Subf21Expense())),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'SUB.F21 – EXPENSE',
+                                style: TextStyle(
+                                  color: Colors.blue.shade900,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            )),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>Subf38Scheme())),
+                          child: Container(
+                            height: 40,
+                            width: 200,
+                            decoration: BoxDecoration(
+                                border:
+                                    Border.all(color: Colors.blue.shade900)),
+                            child: Center(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 30),
+                              child: Text(
+                                'SUB.F38 - SCHEME DETAILED',
                                 style: TextStyle(
                                   color: Colors.blue.shade900,
                                   fontWeight: FontWeight.bold,

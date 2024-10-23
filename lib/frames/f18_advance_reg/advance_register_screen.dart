@@ -93,16 +93,16 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                         );
                       }
                     },
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 500),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 500),
                       child: Icon(Icons.search),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: DataTable(
@@ -111,7 +111,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                     border: TableBorder.all(),
                     columns: [
                       DataColumn(
-                        label: Container(
+                        label: SizedBox(
                           width: 100, // Fixed width for the column
                           child: Center(
                             child: Text(
@@ -124,7 +124,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                         ),
                       ),
                       DataColumn(
-                        label: Container(
+                        label: SizedBox(
                           width: 150, // Fixed width for the column
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -161,7 +161,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                         ),
                       ),
                       DataColumn(
-                        label: Container(
+                        label: SizedBox(
                           width: 200, // Fixed width for the column
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -198,7 +198,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                         ),
                       ),
                       DataColumn(
-                        label: Container(
+                        label: SizedBox(
                           width: 150, // Fixed width for the column
                           child: Center(
                             child: Text(
@@ -213,9 +213,9 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                     ],
                     rows: [
                       // Fixed row with text "IP1", "IP2", "IP3", "IP4"
-                      DataRow(cells: [
+                      const DataRow(cells: [
                         DataCell(
-                          Container(
+                          SizedBox(
                             width: 100, // Fixed width for the cell
                             child: Center(
                               child: TextField(),
@@ -223,15 +223,15 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                           ),
                         ),
                         DataCell(
-                          Container(
+                          SizedBox(
                             width: 150, // Fixed width for the cell
                             child: Center(
                               child: TextField(),
                             ),
                           ),
                         ),
-                        DataCell(
-                          Container(
+                       DataCell(
+                          SizedBox(
                             width: 200, // Fixed width for the cell
                             child: Center(
                               child: TextField(),
@@ -239,7 +239,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                           ),
                         ),
                         DataCell(
-                          Container(
+                          SizedBox(
                             width: 150, // Fixed width for the cell
                             child: Center(
                               child: TextField(),
@@ -252,7 +252,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                         31,
                         (index) => DataRow(cells: [
                           DataCell(
-                            Container(
+                            SizedBox(
                               width: 100, // Fixed width for the cell
                               child: TextField(
                                 maxLines: null,
@@ -261,7 +261,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                                     inputData[index][0] = value;
                                   });
                                 },
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: InputBorder.none,
                                   contentPadding: EdgeInsets.symmetric(
                                       vertical: 10, horizontal: 10),
@@ -270,7 +270,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                             ),
                           ),
                           DataCell(
-                            Container(
+                            SizedBox(
                               width: 150, // Fixed width for the cell
                               child: TextField(
                                 maxLines: null,
@@ -279,7 +279,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                                     inputData[index][1] = value;
                                   });
                                 },
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: InputBorder.none,
                                   contentPadding: EdgeInsets.symmetric(
                                       vertical: 10, horizontal: 10),
@@ -288,7 +288,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                             ),
                           ),
                           DataCell(
-                            Container(
+                            SizedBox(
                               width: 200, // Fixed width for the cell
                               child: TextField(
                                 maxLines: null,
@@ -297,7 +297,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                                     inputData[index][2] = value;
                                   });
                                 },
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: InputBorder.none,
                                   contentPadding: EdgeInsets.symmetric(
                                       vertical: 10, horizontal: 10),
@@ -306,7 +306,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                             ),
                           ),
                           DataCell(
-                            Container(
+                            SizedBox(
                               width: 150, // Fixed width for the cell
                               child: TextField(
                                 maxLines: null,
@@ -315,7 +315,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                                     inputData[index][3] = value;
                                   });
                                 },
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: InputBorder.none,
                                   contentPadding: EdgeInsets.symmetric(
                                       vertical: 10, horizontal: 10),
@@ -329,7 +329,7 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.only(left: 220),
                 child: Center(
@@ -345,7 +345,13 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                               // Implement save functionality
                             },
                             child: Container(
-                              child: Center(
+                              decoration: BoxDecoration(
+                                color: Colors.blue.shade900,
+                                borderRadius: BorderRadius.circular(5),
+                              ),
+                              height: 30,
+                              width: 130,
+                              child: const Center(
                                 child: Text(
                                   "SAVE",
                                   style: TextStyle(
@@ -353,22 +359,22 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
-                              decoration: BoxDecoration(
-                                color: Colors.blue.shade900,
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              height: 30,
-                              width: 130,
                             ),
                           ),
                         ),
-                        SizedBox(width: 20),
+                        const SizedBox(width: 20),
                         GestureDetector(
                           onTap: () {
                             // Implement edit functionality
                           },
                           child: Container(
-                            child: Center(
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 90, 158, 92),
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            height: 30,
+                            width: 130,
+                            child: const Center(
                               child: Text(
                                 "EDIT",
                                 style: TextStyle(
@@ -376,12 +382,6 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
-                            decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 90, 158, 92),
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                            height: 30,
-                            width: 130,
                           ),
                         ),
                       ],
@@ -404,7 +404,6 @@ class _AdvanceRegisterScreenState extends State<AdvanceRegisterScreen> {
       lastDate: DateTime(2101),
     );
     if (picked != null) {
-      print('Selected date: $picked');
       // Do something with the selected date
     }
   }

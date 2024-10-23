@@ -34,7 +34,7 @@ class BankMangersview extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Padding(
                           padding: const EdgeInsets.only(left: 123, top: 40),
                           child: Row(
@@ -51,38 +51,38 @@ class BankMangersview extends StatelessWidget {
                                 alignment: Alignment.center,
                                 child: Text(
                                   "${currentDate.day}/${currentDate.month}/${currentDate.year}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black,
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 470),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 470),
                                 child: Icon(Icons.search,
                                     color:
-                                        const Color.fromARGB(255, 7, 75, 134)),
+                                        Color.fromARGB(255, 7, 75, 134)),
                               )
                             ],
                           ),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         CustomizableTable(
                           headers: const ['', 'SETTLEMENT'],
                           itemCount: 10,
                         ),
                         Padding(
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                               horizontal: 122, vertical: 8),
                           child: Table(
                             border: TableBorder.all(),
-                            columnWidths: {
+                            columnWidths: const {
                               0: FlexColumnWidth(1),
                               1: FlexColumnWidth(1),
                               2: FlexColumnWidth(1),
                               3: FlexColumnWidth(1),
                             },
-                            children: [
+                            children: const [
                               TableRow(
                                 decoration: BoxDecoration(
                                     // color: Colors.grey[200],
@@ -94,36 +94,36 @@ class BankMangersview extends StatelessWidget {
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(
                                           child: Text("BANK 1",
                                               style: TextStyle(
-                                                  color: const Color.fromARGB(
+                                                  color: Color.fromARGB(
                                                       255, 7, 75, 134),
                                                   fontWeight:
                                                       FontWeight.bold))),
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(
                                           child: Text("BANK 2",
                                               style: TextStyle(
-                                                  color: const Color.fromARGB(
+                                                  color: Color.fromARGB(
                                                       255, 7, 75, 134),
                                                   fontWeight:
                                                       FontWeight.bold))),
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(
                                           child: Text("BANK 3",
                                               style: TextStyle(
-                                                  color: const Color.fromARGB(
+                                                  color: Color.fromARGB(
                                                       255, 7, 75, 134),
                                                   fontWeight:
                                                       FontWeight.bold))),
@@ -134,31 +134,31 @@ class BankMangersview extends StatelessWidget {
                               TableRow(
                                 children: [
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(
                                           child: Text("SETTLEMENT",
                                               style: TextStyle(
-                                                  color: const Color.fromARGB(
+                                                  color: Color.fromARGB(
                                                       255, 7, 75, 134),
                                                   fontWeight:
                                                       FontWeight.bold))),
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(child: TextField()),
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(child: TextField()),
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(child: TextField()),
                                     ),
@@ -168,31 +168,31 @@ class BankMangersview extends StatelessWidget {
                               TableRow(
                                 children: [
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(
                                           child: Text("STATEMENT",
                                               style: TextStyle(
-                                                  color: const Color.fromARGB(
+                                                  color: Color.fromARGB(
                                                       255, 7, 75, 134),
                                                   fontWeight:
                                                       FontWeight.bold))),
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(child: TextField()),
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(child: TextField()),
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(child: TextField()),
                                     ),
@@ -202,32 +202,32 @@ class BankMangersview extends StatelessWidget {
                               TableRow(
                                 children: [
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(
                                           child: Text(
                                         "DIFFERENCE",
                                         style: TextStyle(
-                                            color: const Color.fromARGB(
+                                            color: Color.fromARGB(
                                                 255, 7, 75, 134),
                                             fontWeight: FontWeight.bold),
                                       )),
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: Center(child: TextField()),
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: TextField(),
                                     ),
                                   ),
                                   TableCell(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 40,
                                       child: TextField(),
                                     ),
@@ -487,14 +487,14 @@ class CustomizableTable extends StatelessWidget {
                           child: Center(
                             child: Text(
                               rowData[0],
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.black,
                               ),
                             ),
                           ),
                         ),
                         Container(
-                          child: Text(""),
+                          child: const Text(""),
                           width: 1.0,
                           height: 50.0,
                           color: Colors.black,
@@ -503,7 +503,7 @@ class CustomizableTable extends StatelessWidget {
                           child: Center(
                             child: Text(
                               rowData[1],
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.black,
                               ),
                             ),
@@ -520,7 +520,7 @@ class CustomizableTable extends StatelessWidget {
                   TableCell(
                     child: Row(
                       children: [
-                        Expanded(
+                        const Expanded(
                           child: Center(
                             child: TextField(
                               style: TextStyle(
@@ -530,12 +530,12 @@ class CustomizableTable extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          child: TextField(),
+                          child: const TextField(),
                           width: 1.0,
                           height: 50.0,
                           color: Colors.black,
                         ),
-                        Expanded(
+                        const Expanded(
                           child: Center(
                             child: TextField(
                               style: TextStyle(
@@ -545,12 +545,12 @@ class CustomizableTable extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          child: TextField(),
                           width: 1.0,
                           height: 50.0,
                           color: Colors.black,
+                          child: const TextField(),
                         ),
-                        Expanded(
+                        const Expanded(
                           child: Center(
                             child: TextField(
                               style: TextStyle(
@@ -560,10 +560,10 @@ class CustomizableTable extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          child: TextField(),
                           width: 1.0,
                           height: 50.0,
                           color: Colors.black,
+                          child: const TextField(),
                         ),
                       ],
                     ),

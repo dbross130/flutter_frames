@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Increment Containers Example'),
+          title: const Text('Increment Containers Example'),
         ),
         body: IncrementContainersExample(),
       ),
@@ -42,7 +42,7 @@ class _IncrementContainersExampleState extends State<IncrementContainersExample>
           Column(
             children: _containers.map((label) {
               return Container(
-                margin: EdgeInsets.symmetric(vertical: 5), // Add spacing between containers
+                margin: const EdgeInsets.symmetric(vertical: 5), // Add spacing between containers
                 height: 35,
                 width: 60,
                 decoration: BoxDecoration(
@@ -61,7 +61,7 @@ class _IncrementContainersExampleState extends State<IncrementContainersExample>
               );
             }).toList(),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: GestureDetector(

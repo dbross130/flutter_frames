@@ -1,4 +1,3 @@
-// ignore_for_file: dead_code
 
 import 'package:flutter/material.dart';
 import 'package:flutter_frames/frames/f3_caworksheet/casearchpage.dart';
@@ -15,7 +14,7 @@ class _CaWorksheetState extends State<CaWorksheet> {
   @override
   Widget build(BuildContext context) {
     DateFormat('dd-MM-yyyy').format(DateTime.now());
-    TimeOfDay? _selectedTime;
+    TimeOfDay? selectedTime;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -341,7 +340,8 @@ class _CaWorksheetState extends State<CaWorksheet> {
                                   padding: const EdgeInsets.only(
                                       left: 10, top: 5, bottom: 5),
                                   child: Text(
-                                    'Start time: ${_selectedTime?.format(context) ?? "Select"}',
+                                    // ignore: dead_code
+                                    'Start time: ${selectedTime?.format(context) ?? "Select"}',
                                     style: const TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.bold),

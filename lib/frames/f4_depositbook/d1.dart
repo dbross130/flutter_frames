@@ -112,7 +112,7 @@ class D1 extends StatelessWidget {
                               child: const TextField(),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Padding(
@@ -121,14 +121,14 @@ class D1 extends StatelessWidget {
                               width: 150,
                               height: 30,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(6),
                                       topRight: Radius.elliptical(8, 8)),
                                   border: Border.all(
                                       width: 2, color: Colors.blue.shade900)),
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 15),
-                                child: const TextField(
+                              child: const Padding(
+                                padding: EdgeInsets.only(left: 15),
+                                child: TextField(
                                   decoration: InputDecoration(
                                       hintText: 'NO OF CARDS',
                                       hintStyle: TextStyle(
@@ -156,7 +156,7 @@ class D1 extends StatelessWidget {
                               child: const TextField(),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Padding(
@@ -165,14 +165,14 @@ class D1 extends StatelessWidget {
                               width: 150,
                               height: 30,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(6),
                                       topRight: Radius.elliptical(8, 8)),
                                   border: Border.all(
                                       width: 2, color: Colors.blue.shade900)),
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 15),
-                                child: const TextField(
+                              child: const Padding(
+                                padding: EdgeInsets.only(left: 15),
+                                child: TextField(
                                   decoration: InputDecoration(
                                       hintText: 'NO OF SCAN',
                                       hintStyle: TextStyle(fontSize: 14)),
@@ -198,7 +198,7 @@ class D1 extends StatelessWidget {
                               child: const TextField(),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Padding(
@@ -207,14 +207,14 @@ class D1 extends StatelessWidget {
                               width: 150,
                               height: 30,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(6),
                                       topRight: Radius.elliptical(8, 8)),
                                   border: Border.all(
                                       width: 2, color: Colors.blue.shade900)),
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 15),
-                                child: const TextField(
+                              child: const Padding(
+                                padding: EdgeInsets.only(left: 15),
+                                child: TextField(
                                   decoration: InputDecoration(
                                       hintText: 'NO OF PPC',
                                       hintStyle: TextStyle(fontSize: 14)),
@@ -238,7 +238,7 @@ class D1 extends StatelessWidget {
                               child: const TextField(),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Padding(
@@ -247,14 +247,14 @@ class D1 extends StatelessWidget {
                               width: 150,
                               height: 30,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(6),
                                       topRight: Radius.elliptical(8, 8)),
                                   border: Border.all(
                                       width: 2, color: Colors.blue.shade900)),
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 10),
-                                child: const TextField(
+                              child: const Padding(
+                                padding: EdgeInsets.only(left: 10),
+                                child: TextField(
                                   decoration: InputDecoration(
                                       hintText: 'NO OF CREDIT',
                                       hintStyle: TextStyle(fontSize: 14)),
@@ -280,7 +280,7 @@ class D1 extends StatelessWidget {
                               child: const TextField(),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Padding(
@@ -289,14 +289,14 @@ class D1 extends StatelessWidget {
                               width: 150,
                               height: 30,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(6),
                                       topRight: Radius.elliptical(8, 8)),
                                   border: Border.all(
                                       width: 2, color: Colors.blue.shade900)),
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 10),
-                                child: const TextField(
+                              child: const Padding(
+                                padding: EdgeInsets.only(left: 10),
+                                child: TextField(
                                   decoration: InputDecoration(
                                       hintText: 'NO OF CCMS',
                                       hintStyle: TextStyle(fontSize: 14)),
@@ -322,7 +322,7 @@ class D1 extends StatelessWidget {
                               child: const TextField(),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Padding(
@@ -331,14 +331,14 @@ class D1 extends StatelessWidget {
                               width: 150,
                               height: 30,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(6),
                                       topRight: Radius.elliptical(8, 8)),
                                   border: Border.all(
                                       width: 2, color: Colors.blue.shade900)),
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 10),
-                                child: const TextField(
+                              child: const Padding(
+                                padding: EdgeInsets.only(left: 10),
+                                child: TextField(
                                   decoration: InputDecoration(
                                       hintText: 'NO OF REWARD',
                                       hintStyle: TextStyle(fontSize: 14)),
@@ -362,7 +362,7 @@ class D1 extends StatelessWidget {
                               child: const TextField(),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Padding(
@@ -371,14 +371,14 @@ class D1 extends StatelessWidget {
                               width: 150,
                               height: 30,
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(6),
                                       topRight: Radius.elliptical(8, 8)),
                                   border: Border.all(
                                       width: 2, color: Colors.blue.shade900)),
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 10),
-                                child: const TextField(
+                              child: const Padding(
+                                padding: EdgeInsets.only(left: 10),
+                                child: TextField(
                                   decoration: InputDecoration(
                                       hintText: 'NO OF COUPONS',
                                       hintStyle: TextStyle(fontSize: 14)),
@@ -399,18 +399,18 @@ class D1 extends StatelessWidget {
                 onTap: () => Navigator.pop(context),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 152, 199, 154),
+                      color: const Color.fromARGB(255, 152, 199, 154),
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(
                         color: Colors.black,
                       )),
-                  child: Center(
+                  width: 150,
+                  height: 30,
+                  child: const Center(
                       child: Text(
                     "Ok",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   )),
-                  width: 150,
-                  height: 30,
                 ),
               ),
             )

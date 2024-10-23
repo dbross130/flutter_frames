@@ -54,7 +54,7 @@ class StaffsPage extends StatelessWidget {
                     child: DataTable(
                       border: TableBorder.all(),
                       columns: [
-                        DataColumn(
+                        const DataColumn(
                             label: Text(
                           'STAFF NAME',
                           style: TextStyle(
@@ -62,7 +62,7 @@ class StaffsPage extends StatelessWidget {
                             fontSize: 13,
                           ),
                         )),
-                        DataColumn(
+                        const DataColumn(
                             label: Text(
                           'COMPLAINT DESCRIPTION',
                           style: TextStyle(
@@ -79,7 +79,7 @@ class StaffsPage extends StatelessWidget {
                             color: Colors.red.shade700,
                           ),
                         )),
-                        DataColumn(
+                        const DataColumn(
                             label: Text(
                           'ACTION TAKEN',
                           style: TextStyle(

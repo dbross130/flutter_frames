@@ -208,9 +208,9 @@ class PPC extends StatelessWidget {
                               decoration: BoxDecoration(
                                   border:
                                       Border.all(color: Colors.blue.shade900)),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: const TextField(
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: TextField(
                                   decoration:
                                       InputDecoration(border: InputBorder.none),
                                 ),
@@ -233,9 +233,9 @@ class PPC extends StatelessWidget {
                               decoration: BoxDecoration(
                                   border:
                                       Border.all(color: Colors.blue.shade900)),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: const TextField(
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: TextField(
                                   decoration:
                                       InputDecoration(border: InputBorder.none),
                                 ),

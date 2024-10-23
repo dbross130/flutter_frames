@@ -62,7 +62,7 @@ class SalesRegister extends StatelessWidget {
                 ],
                 itemCount: 32,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               )
             ],

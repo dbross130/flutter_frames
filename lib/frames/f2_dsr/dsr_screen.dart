@@ -52,14 +52,14 @@ class DsrScreen extends StatelessWidget {
                         color: Colors.blue.shade700,
                         size: 30,
                       ),
-                      items: [
+                      items: const [
                         DropdownMenuItem(
                           child: Text('PRODUCT 1'),
                           value: 'product1',
                         ),
                         DropdownMenuItem(
-                          child: Text('PRODUCT 2'),
                           value: 'product1',
+                          child: Text('PRODUCT 2'),
                         ),
                         DropdownMenuItem(
                           child: Text('PRODUCT 3'),
@@ -100,14 +100,14 @@ class DsrScreen extends StatelessWidget {
                       color: Colors.blue.shade700,
                       size: 30,
                     ),
-                    items: [
+                    items: const [
                       DropdownMenuItem(
                         child: Text('PRODUCT 1'),
                         value: 'product1',
                       ),
                       DropdownMenuItem(
-                        child: Text('PRODUCT 2'),
                         value: 'product1',
+                        child: Text('PRODUCT 2'),
                       ),
                       DropdownMenuItem(
                         child: Text('PRODUCT 3'),
@@ -184,8 +184,8 @@ class DsrScreen extends StatelessWidget {
                           );
                         }
                       },
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 1000),
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 1000),
                         child: Icon(Icons.search),
                       ),
                     ),
@@ -193,7 +193,7 @@ class DsrScreen extends StatelessWidget {
                 ),
               ),
               CustomizableTable(
-                headers: [
+                headers: const [
                   'D A T E',
                   'TANK 1',
                   'TANK 2',
@@ -202,17 +202,18 @@ class DsrScreen extends StatelessWidget {
                   'RECEIPT',
                   'TOTAL STOCK',
                   'OPENING METER READING',
-                  'TEST', // Existing header
-                  'METER SALE', // New header
-                  'DIP SALE', // New header
-                  'STOCK \n [GAIN/LOSS]', // New header
-                  'CUMULATIVE \n SALE', // New header with subcategories
-                  'TOTAL ENGINE & \nGEAR OIL SALES', // New header
-                  'REMARKS', // New header
+                  'TEST', 
+                  'METER SALE', 
+                  'DIP SALE', 
+                  'STOCK \n [GAIN/LOSS]', 
+                  
+                  'CUMULATIVE \n SALE', 
+                  'TOTAL ENGINE & \nGEAR OIL SALES',
+                  'REMARKS',
                 ],
-                itemCount: 31, // Changed to 31 to include 31 days
+                itemCount: 31, 
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
@@ -267,7 +268,7 @@ class DsrScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],
@@ -294,7 +295,7 @@ class CustomizableTable extends StatelessWidget {
           children: [
             Table(
               border: TableBorder.all(),
-              columnWidths: {
+              columnWidths: const {
                 0: FixedColumnWidth(50.0),
                 1: FixedColumnWidth(170.0),
                 2: FixedColumnWidth(170.0),
@@ -342,8 +343,8 @@ class CustomizableTable extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Container(
-                                    padding: EdgeInsets.all(8.0),
-                                    decoration: BoxDecoration(
+                                    padding: const EdgeInsets.all(8.0),
+                                    decoration: const BoxDecoration(
                                       border: Border(
                                         bottom: BorderSide(),
                                       ),
@@ -352,7 +353,7 @@ class CustomizableTable extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         headers[index + 1],
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           color:
                                               Color.fromARGB(255, 7, 75, 134),
                                           fontWeight: FontWeight.bold,
@@ -363,7 +364,7 @@ class CustomizableTable extends StatelessWidget {
                                   ),
                                   Row(
                                     children: [
-                                      Expanded(
+                                      const Expanded(
                                         child: Center(
                                             child: Text(
                                           'DIP',
@@ -380,7 +381,7 @@ class CustomizableTable extends StatelessWidget {
                                         color:
                                             Colors.black, // Vertical line color
                                       ),
-                                      Expanded(
+                                      const Expanded(
                                         child: Center(
                                             child: Text(
                                           'WATER\nDIP',
@@ -399,13 +400,13 @@ class CustomizableTable extends StatelessWidget {
                       child: Center(
                         child: Container(
                           height: 100, // Set the height of the header
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
                                 'OPENING',
                                 style: TextStyle(
-                                  color: const Color.fromARGB(255, 7, 75, 134),
+                                  color: Color.fromARGB(255, 7, 75, 134),
                                   fontWeight: FontWeight.bold,
                                   fontSize: 14, // Adjust font size here
                                 ),
@@ -413,7 +414,7 @@ class CustomizableTable extends StatelessWidget {
                               Text(
                                 'STOCK', // Changed here
                                 style: TextStyle(
-                                  color: const Color.fromARGB(255, 7, 75, 134),
+                                  color: Color.fromARGB(255, 7, 75, 134),
                                   fontWeight: FontWeight.bold,
                                   fontSize: 14, // Adjust font size here
                                 ),
@@ -427,11 +428,11 @@ class CustomizableTable extends StatelessWidget {
                       child: Center(
                         child: Container(
                           height: 100, // Set the height of the header
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               'RECEIPT',
                               style: TextStyle(
-                                color: const Color.fromARGB(255, 7, 75, 134),
+                                color: Color.fromARGB(255, 7, 75, 134),
                                 fontWeight: FontWeight.bold,
                                 fontSize: 14, // Adjust font size here
                               ),
@@ -444,13 +445,13 @@ class CustomizableTable extends StatelessWidget {
                       child: Center(
                         child: Container(
                           height: 100, // Set the height of the header
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
                                 'TOTAL',
                                 style: TextStyle(
-                                  color: const Color.fromARGB(255, 7, 75, 134),
+                                  color: Color.fromARGB(255, 7, 75, 134),
                                   fontWeight: FontWeight.bold,
                                   fontSize: 14, // Adjust font size here
                                 ),
@@ -458,7 +459,7 @@ class CustomizableTable extends StatelessWidget {
                               Text(
                                 'STOCK', // Changed here
                                 style: TextStyle(
-                                  color: const Color.fromARGB(255, 7, 75, 134),
+                                  color: Color.fromARGB(255, 7, 75, 134),
                                   fontWeight: FontWeight.bold,
                                   fontSize: 14, // Adjust font size here
                                 ),
@@ -472,8 +473,8 @@ class CustomizableTable extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            padding: EdgeInsets.all(1),
-                            decoration: BoxDecoration(
+                            padding: const EdgeInsets.all(1),
+                            decoration: const BoxDecoration(
                               border: Border(
                                 bottom: BorderSide(),
                               ),
@@ -482,8 +483,8 @@ class CustomizableTable extends StatelessWidget {
                             child: Center(
                               child: Text(
                                 headers[7], // "OPENING METER READING"
-                                style: TextStyle(
-                                  color: const Color.fromARGB(255, 7, 75, 134),
+                                style: const TextStyle(
+                                  color: Color.fromARGB(255, 7, 75, 134),
                                   fontWeight: FontWeight.bold,
                                   fontSize: 14, // Adjust font size here
                                 ),
@@ -508,7 +509,7 @@ class CustomizableTable extends StatelessWidget {
                                                       15.0),
                                                   child: Text(
                                                     'MACHINE ${index + 1}',
-                                                    style: TextStyle(
+                                                    style: const TextStyle(
                                                         color: Color.fromARGB(
                                                             255, 204, 95, 87),
                                                         fontWeight:
@@ -529,12 +530,12 @@ class CustomizableTable extends StatelessWidget {
                                             ),
                                             Row(
                                               children: [
-                                                Expanded(
+                                                const Expanded(
                                                   child: Center(
                                                       child: Text(
                                                     'N.ID',
                                                     style: TextStyle(
-                                                        color: const Color
+                                                        color: Color
                                                             .fromARGB(
                                                             255, 7, 76, 134),
                                                         fontWeight:
@@ -546,12 +547,12 @@ class CustomizableTable extends StatelessWidget {
                                                   height: 80.0,
                                                   color: Colors.black,
                                                 ),
-                                                Expanded(
+                                                const Expanded(
                                                   child: Center(
                                                       child: Text(
                                                     'N.ID',
                                                     style: TextStyle(
-                                                        color: const Color
+                                                        color: Color
                                                             .fromARGB(
                                                             255, 7, 75, 134),
                                                         fontWeight:
@@ -591,7 +592,7 @@ class CustomizableTable extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 80, left: 20),
                         child: Text(
                           headers[9], // New column "METER SALE"
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color.fromARGB(255, 7, 75, 134),
                             fontWeight: FontWeight.bold,
                             fontSize: 14, // Adjust font size here
@@ -604,8 +605,8 @@ class CustomizableTable extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 80, left: 20),
                         child: Text(
                           headers[10], // New column "DIP SALE"
-                          style: TextStyle(
-                            color: const Color.fromARGB(255, 7, 75, 134),
+                          style: const TextStyle(
+                            color: Color.fromARGB(255, 7, 75, 134),
                             fontWeight: FontWeight.bold,
                             fontSize: 14, // Adjust font size here
                           ),
@@ -617,7 +618,7 @@ class CustomizableTable extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 80, left: 20),
                         child: Text(
                           headers[11], // New column "STOCK [GAIN/LOSS]"
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color.fromARGB(255, 7, 75, 134),
                             fontWeight: FontWeight.bold,
                             fontSize: 14, // Adjust font size here
@@ -632,8 +633,8 @@ class CustomizableTable extends StatelessWidget {
                             padding: const EdgeInsets.only(top: 80, left: 20),
                             child: Text(
                               headers[12], // New column "CUMULATIVE SALES"
-                              style: TextStyle(
-                                color: const Color.fromARGB(255, 7, 75, 134),
+                              style: const TextStyle(
+                                color: Color.fromARGB(255, 7, 75, 134),
                                 fontWeight: FontWeight.bold,
                                 fontSize: 14, // Adjust font size here
                               ),
@@ -654,9 +655,9 @@ class CustomizableTable extends StatelessWidget {
                                 child: Text(
                                   headers[
                                       13], // New column "TOTAL ENGINE AND GEAR OIL SALES"
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color:
-                                        const Color.fromARGB(255, 7, 75, 134),
+                                        Color.fromARGB(255, 7, 75, 134),
                                     fontWeight: FontWeight.bold,
                                     fontSize: 14, // Adjust font size here
                                   ),
@@ -671,7 +672,7 @@ class CustomizableTable extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              Expanded(
+                              const Expanded(
                                 child: Center(
                                     child: Text(
                                   'PACKED',
@@ -688,7 +689,7 @@ class CustomizableTable extends StatelessWidget {
                                       90, // Set the height to cover the entire cell
                                   color: Colors.black // Vertical line color
                                   ),
-                              Expanded(
+                              const Expanded(
                                 child: Center(
                                     child: Text(
                                   'LOOSE',
@@ -768,7 +769,7 @@ class CustomizableTable extends StatelessWidget {
                           (i) => TableCell(
                                 child: Row(
                                   children: [
-                                    Expanded(
+                                    const Expanded(
                                       child: Center(
                                           child: TextField(
                                         decoration: InputDecoration(
@@ -780,7 +781,7 @@ class CustomizableTable extends StatelessWidget {
                                       height: 49.0,
                                       color: Colors.black,
                                     ),
-                                    Expanded(
+                                    const Expanded(
                                       child: Center(
                                           child: TextField(
                                         decoration: InputDecoration(
@@ -819,7 +820,7 @@ class CustomizableTable extends StatelessWidget {
                                           if (index >= 0)
                                             Row(
                                               children: [
-                                                Expanded(
+                                                const Expanded(
                                                   child: Center(
                                                       child: TextField(
                                                     decoration: InputDecoration(
@@ -832,7 +833,7 @@ class CustomizableTable extends StatelessWidget {
                                                   height: 49.0,
                                                   color: Colors.black,
                                                 ),
-                                                Expanded(
+                                                const Expanded(
                                                   child: Center(
                                                       child: TextField(
                                                     decoration: InputDecoration(
@@ -886,7 +887,7 @@ class CustomizableTable extends StatelessWidget {
                       TableCell(
                         child: Row(
                           children: [
-                            Expanded(
+                            const Expanded(
                               child: Center(
                                   child: TextField(
                                 decoration:
@@ -899,7 +900,7 @@ class CustomizableTable extends StatelessWidget {
                               height: 47.0,
                               color: Colors.black,
                             ),
-                            Expanded(
+                            const Expanded(
                               child: Center(
                                 child: TextField(
                                   decoration:

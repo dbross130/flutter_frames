@@ -73,13 +73,13 @@ class _DepositBookState extends State<DepositBook> {
                           ),
                           child: DropdownButton(
                             underline: Container(),
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.arrow_drop_down,
                               color: Colors.white,
                               size: 30,
                             ),
-                            hint: Padding(
-                              padding: const EdgeInsets.only(left: 40),
+                            hint: const Padding(
+                              padding: EdgeInsets.only(left: 40),
                               child: Text(
                                 'SHIFT',
                                 style: TextStyle(
@@ -88,7 +88,7 @@ class _DepositBookState extends State<DepositBook> {
                                 ),
                               ),
                             ),
-                            items: [],
+                            items: const [],
                             onChanged: (value) {},
                           ),
                         ),
@@ -136,7 +136,7 @@ class _DepositBookState extends State<DepositBook> {
                                   child: Text(
                                     caname,
                                     style:
-                                        TextStyle(fontWeight: FontWeight.bold),
+                                        const TextStyle(fontWeight: FontWeight.bold),
                                   ),
                                 ),
                               ),
@@ -144,7 +144,7 @@ class _DepositBookState extends State<DepositBook> {
                           );
                         }).toList(),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: GestureDetector(
@@ -172,12 +172,12 @@ class _DepositBookState extends State<DepositBook> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Column(
                     children: _list.map((label) {
                       return Center(
                         child: Container(
-                          margin: EdgeInsets.symmetric(vertical: 5),
+                          margin: const EdgeInsets.symmetric(vertical: 5),
                           height: 35,
                           width: 60,
                           decoration: BoxDecoration(
@@ -197,7 +197,7 @@ class _DepositBookState extends State<DepositBook> {
                       );
                     }).toList(),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: GestureDetector(

@@ -47,7 +47,7 @@ class TotalDeposit extends StatelessWidget {
                           DataColumn(label: Text('EXTRA REWARD')),
                         ],
                         rows: [
-                          DataRow(cells: [
+                          const DataRow(cells: [
                             DataCell(TextField()),
                             DataCell(TextField()),
                             DataCell(TextField()),
@@ -58,7 +58,7 @@ class TotalDeposit extends StatelessWidget {
                             DataCell(TextField()),
                             DataCell(TextField()),
                           ]),
-                          DataRow(cells: [
+                          const DataRow(cells: [
                             DataCell(Text('')),
                             DataCell(TextField()),
                             DataCell(TextField()),
@@ -69,7 +69,7 @@ class TotalDeposit extends StatelessWidget {
                             DataCell(TextField()),
                             DataCell(TextField()),
                           ]),
-                          DataRow(cells: [
+                          const DataRow(cells: [
                             DataCell(Text('')),
                             DataCell(TextField()),
                             DataCell(TextField()),
@@ -80,7 +80,7 @@ class TotalDeposit extends StatelessWidget {
                             DataCell(TextField()),
                             DataCell(TextField()),
                           ]),
-                          DataRow(cells: [
+                          const DataRow(cells: [
                             DataCell(Text('')),
                             DataCell(TextField()),
                             DataCell(TextField()),
@@ -91,7 +91,7 @@ class TotalDeposit extends StatelessWidget {
                             DataCell(TextField()),
                             DataCell(TextField()),
                           ]),
-                          DataRow(cells: [
+                          const DataRow(cells: [
                             DataCell(Text('')),
                             DataCell(TextField()),
                             DataCell(TextField()),
@@ -102,7 +102,7 @@ class TotalDeposit extends StatelessWidget {
                             DataCell(TextField()),
                             DataCell(TextField()),
                           ]),
-                          DataRow(cells: [
+                          const DataRow(cells: [
                             DataCell(Text('')),
                             DataCell(TextField()),
                             DataCell(TextField()),
@@ -113,7 +113,7 @@ class TotalDeposit extends StatelessWidget {
                             DataCell(TextField()),
                             DataCell(TextField()),
                           ]),
-                          DataRow(cells: [
+                          const DataRow(cells: [
                             DataCell(Text('')),
                             DataCell(TextField()),
                             DataCell(TextField()),
@@ -124,7 +124,7 @@ class TotalDeposit extends StatelessWidget {
                             DataCell(TextField()),
                             DataCell(TextField()),
                           ]),
-                          DataRow(cells: [
+                          const DataRow(cells: [
                             DataCell(Text('')),
                             DataCell(TextField()),
                             DataCell(TextField()),
@@ -135,7 +135,7 @@ class TotalDeposit extends StatelessWidget {
                             DataCell(TextField()),
                             DataCell(TextField()),
                           ]),
-                          DataRow(cells: [
+                          const DataRow(cells: [
                             DataCell(Text('')),
                             DataCell(TextField()),
                             DataCell(TextField()),
@@ -146,7 +146,7 @@ class TotalDeposit extends StatelessWidget {
                             DataCell(TextField()),
                             DataCell(TextField()),
                           ]),
-                          DataRow(cells: [
+                          const DataRow(cells: [
                             DataCell(Text('')),
                             DataCell(TextField()),
                             DataCell(TextField()),
@@ -166,14 +166,14 @@ class TotalDeposit extends StatelessWidget {
                               decoration: BoxDecoration(
                                 border: Border.all(
                                     color: Colors.blue.shade900, width: 2),
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(8),
                                   topRight: Radius.circular(8),
                                 ),
                               ),
-                              child: Padding(
+                              child: const Padding(
                                 padding:
-                                    const EdgeInsets.only(left: 10, top: 10),
+                                    EdgeInsets.only(left: 10, top: 10),
                                 child: TextField(
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(
@@ -188,14 +188,14 @@ class TotalDeposit extends StatelessWidget {
                               decoration: BoxDecoration(
                                 border: Border.all(
                                     color: Colors.blue.shade900, width: 2),
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(8),
                                   topRight: Radius.circular(8),
                                 ),
                               ),
-                              child: Padding(
+                              child: const Padding(
                                 padding:
-                                    const EdgeInsets.only(left: 10, top: 10),
+                                    EdgeInsets.only(left: 10, top: 10),
                                 child: TextField(
                                   decoration: InputDecoration(
                                     border: OutlineInputBorder(
@@ -210,14 +210,14 @@ class TotalDeposit extends StatelessWidget {
                               decoration: BoxDecoration(
                                 border: Border.all(
                                     color: Colors.blue.shade900, width: 2),
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(8),
                                   topRight: Radius.circular(8),
                                 ),
                               ),
-                              child: Padding(
+                              child: const Padding(
                                 padding:
-                                    const EdgeInsets.only(left: 10, top: 10),
+                                    EdgeInsets.only(left: 10, top: 10),
                                 child: TextField(
                                   decoration: InputDecoration(
                                       border: OutlineInputBorder(
@@ -233,14 +233,14 @@ class TotalDeposit extends StatelessWidget {
                               decoration: BoxDecoration(
                                 border: Border.all(
                                     color: Colors.blue.shade900, width: 2),
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(8),
                                   topRight: Radius.circular(8),
                                 ),
                               ),
-                              child: Padding(
+                              child: const Padding(
                                 padding:
-                                    const EdgeInsets.only(left: 10, top: 10),
+                                    EdgeInsets.only(left: 10, top: 10),
                                 child: TextField(
                                   decoration: InputDecoration(
                                       border: OutlineInputBorder(
@@ -256,14 +256,14 @@ class TotalDeposit extends StatelessWidget {
                               decoration: BoxDecoration(
                                 border: Border.all(
                                     color: Colors.blue.shade900, width: 2),
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(8),
                                   topRight: Radius.circular(8),
                                 ),
                               ),
-                              child: Padding(
+                              child: const Padding(
                                 padding:
-                                    const EdgeInsets.only(left: 10, top: 10),
+                                    EdgeInsets.only(left: 10, top: 10),
                                 child: TextField(
                                   decoration: InputDecoration(
                                       border: OutlineInputBorder(
@@ -279,14 +279,14 @@ class TotalDeposit extends StatelessWidget {
                               decoration: BoxDecoration(
                                 border: Border.all(
                                     color: Colors.blue.shade900, width: 2),
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(8),
                                   topRight: Radius.circular(8),
                                 ),
                               ),
-                              child: Padding(
+                              child: const Padding(
                                 padding:
-                                    const EdgeInsets.only(left: 10, top: 10),
+                                    EdgeInsets.only(left: 10, top: 10),
                                 child: TextField(
                                   decoration: InputDecoration(
                                       border: OutlineInputBorder(
@@ -302,14 +302,14 @@ class TotalDeposit extends StatelessWidget {
                               decoration: BoxDecoration(
                                 border: Border.all(
                                     color: Colors.blue.shade900, width: 2),
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(8),
                                   topRight: Radius.circular(8),
                                 ),
                               ),
-                              child: Padding(
+                              child: const Padding(
                                 padding:
-                                    const EdgeInsets.only(left: 10, top: 10),
+                                    EdgeInsets.only(left: 10, top: 10),
                                 child: TextField(
                                   decoration: InputDecoration(
                                       border: OutlineInputBorder(
@@ -328,10 +328,10 @@ class TotalDeposit extends StatelessWidget {
                       child: Container(
                         height: 30,
                         width: 163,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.blue,
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'TOTAL',
                             style: TextStyle(
@@ -345,7 +345,7 @@ class TotalDeposit extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Table(
                         border: TableBorder.all(),
-                        columnWidths: {
+                        columnWidths: const {
                           0: FlexColumnWidth(100),
                           1: FlexColumnWidth(10),
                           2: FlexColumnWidth(10),
@@ -360,8 +360,8 @@ class TotalDeposit extends StatelessWidget {
                           TableRow(
                             children: List.generate(
                               9,
-                              (index) => TableCell(
-                                child: Container(
+                              (index) => const TableCell(
+                                child: SizedBox(
                                   height: 40,
                                   child: Center(
                                     child: TextField(),
@@ -377,7 +377,7 @@ class TotalDeposit extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 456, bottom: 8),
                       child: Row(
                         children: [
-                          Text(
+                          const Text(
                             "TOTAL SUM VALUE: ",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 13),
@@ -390,9 +390,9 @@ class TotalDeposit extends StatelessWidget {
                                         const Color.fromARGB(255, 7, 75, 134))),
                             width: 130,
                             height: 30,
-                            child: Padding(
+                            child: const Padding(
                               padding:
-                                  const EdgeInsets.only(left: 10, bottom: 5),
+                                  EdgeInsets.only(left: 10, bottom: 5),
                               child: TextField(
                                 decoration:
                                     InputDecoration(border: InputBorder.none),

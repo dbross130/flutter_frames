@@ -33,14 +33,14 @@ class LeaveRequest extends StatelessWidget {
                       left: 100, top: 30, bottom: 20, right: 20),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         'NAME:',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Container(
@@ -56,28 +56,28 @@ class LeaveRequest extends StatelessWidget {
                           children: [
                             DropdownButton(
                               underline: Container(),
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.arrow_drop_down,
                                 color: Colors.black,
                                 size: 30,
                               ),
-                              items: [],
+                              items: const [],
                               onChanged: (value) {},
                             ),
                           ],
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text(
+                      const Text(
                         'START DATE:',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Container(
@@ -88,8 +88,8 @@ class LeaveRequest extends StatelessWidget {
                               color: Colors.blue.shade900,
                             ),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: TextField(
                               decoration:
                                   InputDecoration(border: InputBorder.none),
@@ -102,14 +102,14 @@ class LeaveRequest extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 50, right: 20),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         'DESIGNATION:',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Container(
@@ -120,24 +120,24 @@ class LeaveRequest extends StatelessWidget {
                               color: Colors.blue.shade900,
                             ),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: TextField(
                               decoration:
                                   InputDecoration(border: InputBorder.none),
                             ),
                           )),
-                      SizedBox(
+                      const SizedBox(
                         width: 25,
                       ),
-                      Text(
+                      const Text(
                         'END DATE:',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Container(
@@ -148,8 +148,8 @@ class LeaveRequest extends StatelessWidget {
                               color: Colors.blue.shade900,
                             ),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: TextField(
                               decoration:
                                   InputDecoration(border: InputBorder.none),
@@ -162,14 +162,14 @@ class LeaveRequest extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 90, top: 20, right: 20),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         'REASON:',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Container(
@@ -180,8 +180,8 @@ class LeaveRequest extends StatelessWidget {
                               color: Colors.blue.shade900,
                             ),
                           ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: TextField(
                               decoration:
                                   InputDecoration(border: InputBorder.none),
@@ -199,7 +199,7 @@ class LeaveRequest extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: Colors.green.shade500,
                       borderRadius: BorderRadius.circular(6)),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'SUBMIT',
                       style: TextStyle(

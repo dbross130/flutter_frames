@@ -25,7 +25,7 @@ class B2b extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.blue.shade100,
                           borderRadius: BorderRadius.circular(8)),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           'B2B',
                           style: TextStyle(

@@ -44,7 +44,7 @@ class AttendanceRegisterScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.green.shade700),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'SAVE',
                       style: TextStyle(
